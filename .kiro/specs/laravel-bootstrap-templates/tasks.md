@@ -15,7 +15,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Verificar que todos os diretórios essenciais do Laravel existem (app/, config/, database/, public/, resources/, routes/, storage/, tests/)
   - _Requisitos: 1.1, 1.3, 2.1, 2.2, 2.3, 2.4, 2.5, 10.1_
 
-- [~] 1.1 Escrever teste de propriedade para estrutura Laravel completa
+- [x] 1.1 Escrever teste de propriedade para estrutura Laravel completa
   - **Property 1: Estrutura Laravel Completa**
   - **Valida: Requisitos 1.3, 2.2, 2.3, 10.1**
   - Instalar biblioteca Eris para testes baseados em propriedades

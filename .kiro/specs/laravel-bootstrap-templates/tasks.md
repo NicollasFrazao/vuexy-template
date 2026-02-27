@@ -219,34 +219,34 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - _Requisitos: 8.3_
 
 - [ ] 9.5 Atualizar para Laravel 11.x e versões mais recentes
-  - [ ] 9.5.1 Atualizar dependências do Composer
+  - [-] 9.5.1 Atualizar dependências do Composer
     - Atualizar composer.json para Laravel 11.x
     - Executar `composer update` para atualizar todas as dependências
     - Resolver conflitos de dependências se houver
     - _Requisitos: 1.3, 2.1_
 
-  - [ ] 9.5.2 Atualizar configurações do Laravel 11
+  - [~] 9.5.2 Atualizar configurações do Laravel 11
     - Revisar e atualizar arquivos de configuração para Laravel 11
     - Verificar mudanças em config/app.php, config/database.php
     - Atualizar service providers se necessário
     - Verificar compatibilidade de middleware
     - _Requisitos: 2.2, 8.1_
 
-  - [ ] 9.5.3 Reconstruir containers Docker com novas versões
+  - [~] 9.5.3 Reconstruir containers Docker com novas versões
     - Executar `make clean` para remover containers antigos
     - Executar `make build` para reconstruir com PHP 8.2, MySQL 9.1, Node 22
     - Verificar que todos os containers iniciam sem erros
     - Testar conectividade entre serviços
     - _Requisitos: 12.1_
 
-  - [ ] 9.5.4 Executar testes após atualização
+  - [~] 9.5.4 Executar testes após atualização
     - Executar suite completa de testes
     - Corrigir testes quebrados devido a mudanças no Laravel 11
     - Verificar que migrations funcionam com MySQL 9.1
     - Validar que assets compilam com Node 22
     - _Requisitos: 5.5, 12.2_
 
-  - [ ] 9.5.5 Atualizar documentação com novas versões
+  - [~] 9.5.5 Atualizar documentação com novas versões
     - Atualizar README.md com requisitos de versão atualizados
     - Documentar mudanças específicas do Laravel 11
     - Adicionar notas sobre compatibilidade

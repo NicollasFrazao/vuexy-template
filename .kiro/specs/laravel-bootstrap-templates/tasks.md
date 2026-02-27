@@ -185,20 +185,20 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Testar que componentes visuais estão presentes
   - _Requisitos: 6.5_
 
-- [ ] 9. Configurar banco de dados e models
-  - [~] 9.1 Atualizar arquivo .env.example com configurações de banco
+- [~] 9. Configurar banco de dados e models
+  - [x] 9.1 Atualizar arquivo .env.example com configurações de banco
     - Adicionar variáveis DB_CONNECTION, DB_HOST, DB_PORT
     - Adicionar DB_DATABASE, DB_USERNAME, DB_PASSWORD
     - Documentar valores padrão recomendados
     - _Requisitos: 8.1, 12.1_
 
-  - [~] 9.2 Criar migration para adicionar campos ao model User
+  - [x] 9.2 Criar migration para adicionar campos ao model User
     - Criar migration add_profile_fields_to_users_table
     - Adicionar campos avatar (string, nullable) e role (string, default 'user')
     - Implementar métodos up() e down()
     - _Requisitos: 8.2_
 
-  - [~] 9.3 Atualizar model User
+  - [x] 9.3 Atualizar model User
     - Adicionar campos 'avatar' e 'role' ao array $fillable
     - Manter configuração de $hidden e $casts
     - _Requisitos: 8.3_
@@ -209,7 +209,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Testar casting de password
     - _Requisitos: 8.3_
 
-- [ ] 10. Implementar tratamento de erros e páginas de erro customizadas
+- [~] 10. Implementar tratamento de erros e páginas de erro customizadas
   - [~] 10.1 Criar view de erro 404
     - Criar resources/views/errors/404.blade.php
     - Estender layout principal
@@ -227,7 +227,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Testar que página 404 usa layout do template
     - _Requisitos: 11.5_
 
-- [ ] 11. Validar compatibilidade e responsividade de assets
+- [~] 11. Validar compatibilidade e responsividade de assets
   - [~] 11.1 Escrever teste de propriedade para existência de assets
     - **Property 3: Assets Referenciados Existem**
     - **Valida: Requisitos 3.2, 11.1, 11.2, 11.3, 11.4**
@@ -247,7 +247,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Verificar responsividade em diferentes resoluções (inspecionar manualmente)
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
-- [ ] 13. Criar documentação README.md
+- [~] 13. Criar documentação README.md
   - [~] 13.1 Escrever seção de requisitos do sistema
     - Listar versões necessárias de PHP, Composer, Node, NPM
     - Listar extensões PHP necessárias
@@ -279,7 +279,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Fornecer exemplo de criação de nova view usando layout
     - _Requisitos: 9.6_
 
-- [ ] 14. Validar conformidade com PSR-12 e boas práticas
+- [~] 14. Validar conformidade com PSR-12 e boas práticas
   - [~] 14.1 Escrever teste de propriedade para namespaces PSR-4
     - **Property 7: Namespaces Seguem PSR-4**
     - **Valida: Requisito 10.2**
@@ -304,7 +304,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Testar instalação do zero seguindo o README
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
-- [ ] 16. Criar branch full-version e adicionar conteúdo adicional
+- [~] 16. Criar branch full-version e adicionar conteúdo adicional
   - [~] 16.1 Criar nova branch a partir do starter-kit
     - Criar branch "template/laravel/bootstrap/full" a partir da branch starter
     - Verificar que todo o conteúdo do starter está presente
@@ -349,7 +349,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Executar suite de testes
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
-- [ ] 18. Atualizar documentação para full-version
+- [~] 18. Atualizar documentação para full-version
   - [~] 18.1 Atualizar README.md com informações específicas
     - Documentar diferenças entre starter e full-version
     - Listar todas as páginas disponíveis na full-version
@@ -362,7 +362,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Documentar props e slots aceitos
     - _Requisitos: 9.6_
 
-- [ ] 19. Validação final e testes de aceitação
+- [~] 19. Validação final e testes de aceitação
   - [~] 19.1 Executar suite completa de testes em ambas as branches
     - Checkout na branch starter e executar todos os testes
     - Checkout na branch full e executar todos os testes

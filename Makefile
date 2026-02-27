@@ -94,7 +94,7 @@ shell-mysql: ## Acessa shell do container mysql
 	@$(DOCKER_COMPOSE) exec $(MYSQL_CONTAINER) bash
 
 mysql-cli: ## Acessa MySQL CLI
-	@$(DOCKER_COMPOSE) exec $(MYSQL_CONTAINER) mysql -u vuexy -psecret vuexy_laravel
+	@$(DOCKER_COMPOSE) exec $(MYSQL_CONTAINER) mysql -u $$(grep DB_USERNAME .env | cut -d '=' -f2) -p$$(grep DB_PASSWORD .env | cut -d '=' -f2) $$(grep DB_DATABASE .env | cut -d '=' -f2)
 
 ##@ Composer - Gerenciamento de Dependências PHP
 

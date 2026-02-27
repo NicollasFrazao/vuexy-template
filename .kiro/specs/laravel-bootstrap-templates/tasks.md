@@ -4,11 +4,20 @@
 
 Este plano detalha as tarefas de implementação para criar dois templates Laravel integrados com Bootstrap 5 no repositório Vuexy. O projeto será implementado em duas branches Git independentes (starter-kit e full-version), cada uma contendo um projeto Laravel completo e funcional.
 
+### Versões de Software
+
+- **Laravel**: 11.x (última versão estável)
+- **PHP**: 8.2+
+- **MySQL**: 9.1
+- **Node.js**: 22.x LTS
+- **Bootstrap**: 5.x
+- **Vite**: 5.x
+
 ## Tarefas
 
 - [x] 1. Configurar estrutura de branches Git e projeto Laravel base
   - Criar branch "template/laravel/bootstrap/starter" a partir da branch principal
-  - Instalar Laravel (última versão estável) usando Composer
+  - Instalar Laravel 11.x (última versão estável) usando Composer
   - Gerar arquivo .env a partir do .env.example
   - Gerar APP_KEY usando `php artisan key:generate`
   - Instalar dependências NPM padrão do Laravel
@@ -249,8 +258,9 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
 
 - [~] 13. Criar documentação README.md
   - [~] 13.1 Escrever seção de requisitos do sistema
-    - Listar versões necessárias de PHP, Composer, Node, NPM
-    - Listar extensões PHP necessárias
+    - Listar versões necessárias: PHP 8.2+, Composer 2.x, Node 22.x, NPM 10.x
+    - Listar extensões PHP necessárias (PDO, Mbstring, OpenSSL, etc)
+    - Especificar MySQL 9.1 ou compatível
     - _Requisitos: 9.1, 12.5_
 
   - [~] 13.2 Escrever instruções de instalação

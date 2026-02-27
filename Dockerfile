@@ -1,5 +1,5 @@
 # Estágio base
-FROM php:8.1-fpm as base
+FROM php:8.2-fpm as base
 
 # Argumentos de build
 ARG user=vuexy

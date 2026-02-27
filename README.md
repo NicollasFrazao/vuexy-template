@@ -4,10 +4,13 @@ A modern Laravel application integrated with the Vuexy Bootstrap 5 admin templat
 
 ## 🎯 Features
 
-- **Laravel 9.x** - Modern PHP framework
+- **Laravel 11.x** - Latest PHP framework
+- **PHP 8.2+** - Modern PHP version
 - **Vuexy Bootstrap 5** - Premium admin template
-- **Vite** - Fast build tool with hot-reload
+- **Vite 5.x** - Fast build tool with hot-reload
 - **Docker** - Complete containerized development environment
+- **MySQL 9.1** - Latest MySQL database
+- **Node.js 22.x LTS** - Latest Node.js LTS version
 - **Property-Based Testing** - Comprehensive test suite with Eris
 - **PSR-12** - Code style compliance
 - **Responsive Design** - Mobile-first approach
@@ -45,11 +48,11 @@ This single command will:
 
 The application runs with the following services:
 
-- **app**: Laravel application (PHP 8.1-FPM)
+- **app**: Laravel application (PHP 8.2-FPM)
 - **nginx**: Web server
-- **mysql**: MySQL 8.0 database
+- **mysql**: MySQL 9.1 database
 - **redis**: Cache server
-- **node**: Node.js 18 for asset compilation
+- **node**: Node.js 22.x LTS for asset compilation
 
 ### Exposed Ports
 

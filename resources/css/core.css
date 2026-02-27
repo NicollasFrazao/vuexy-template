@@ -1,0 +1,4 @@
+/* Core styles for Vuexy template */
+/* This file imports the main SCSS core styles */
+@import './vendor/core.scss';
+

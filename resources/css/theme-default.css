@@ -1,0 +1,6 @@
+/* Theme Default - Vuexy Bootstrap 5 Template */
+/* This file contains the default theme configuration */
+
+/* Import custom variable overrides for the default theme */
+@import './vendor/_custom-variables/_bootstrap-extended.scss';
+@import './vendor/_custom-variables/_components.scss';

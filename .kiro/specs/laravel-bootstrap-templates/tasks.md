@@ -22,7 +22,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Criar teste que verifica existência de diretórios e arquivos essenciais
   - Configurar mínimo de 100 iterações
 
-- [ ] 2. Configurar sistema de build Vite
+- [x] 2. Configurar sistema de build Vite
   - [x] 2.1 Criar arquivo vite.config.js com configuração personalizada
     - Definir entry points para CSS (app.css, core.css)
     - Definir entry points para JavaScript (app.js, template.js)
@@ -37,55 +37,55 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Criar subdiretórios resources/css/vendors/ e resources/js/vendors/
     - _Requisitos: 3.2, 5.3_
 
-  - [-] 2.3 Escrever teste de propriedade para processamento de assets
+  - [x] 2.3 Escrever teste de propriedade para processamento de assets
     - **Property 2: Configuração de Build Processa Assets**
     - **Valida: Requisitos 5.1, 5.2, 5.3**
     - Criar teste que verifica regras de processamento no vite.config.js
     - Validar que cada tipo de asset tem configuração apropriada
 
-  - [ ] 2.4 Configurar scripts NPM no package.json
+  - [x] 2.4 Configurar scripts NPM no package.json
     - Adicionar script "dev" para desenvolvimento com hot-reload
     - Adicionar script "build" para build de produção
     - Adicionar script "preview" para preview do build
     - _Requisitos: 5.5, 12.2_
 
-- [ ] 3. Checkpoint - Verificar configuração base
+- [x] 3. Checkpoint - Verificar configuração base
   - Executar `npm run build` e verificar que assets são gerados em public/build/
   - Verificar que manifest.json é criado
   - Executar `php artisan serve` e confirmar que servidor inicia sem erros
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
-- [ ] 4. Integrar assets do template Vuexy starter-kit
-  - [ ] 4.1 Copiar assets CSS do template starter-kit
+- [x] 4. Integrar assets do template Vuexy starter-kit
+  - [x] 4.1 Copiar assets CSS do template starter-kit
     - Copiar arquivos CSS da pasta /var/www/vuexy-template/html-laravel-version/Bootstrap5/starter-kit/assets/css/ para resources/css/
     - Organizar arquivos core.css, theme-default.css e vendors
     - Criar resources/css/app.css para customizações
     - _Requisitos: 3.1, 3.2_
 
-  - [ ] 4.2 Copiar assets JavaScript do template starter-kit
+  - [x] 4.2 Copiar assets JavaScript do template starter-kit
     - Copiar arquivos JS da pasta starter-kit/assets/js/ para resources/js/
     - Organizar arquivos template.js, menu.js e vendors
     - Criar resources/js/app.js como entry point principal
     - _Requisitos: 3.1, 3.2_
 
-  - [ ] 4.3 Copiar imagens e fontes do template starter-kit
+  - [x] 4.3 Copiar imagens e fontes do template starter-kit
     - Copiar imagens da pasta starter-kit/assets/img/ para resources/images/
     - Copiar fontes para resources/fonts/ (se existirem)
     - _Requisitos: 3.1, 3.2, 5.3_
 
-  - [ ] 4.4 Atualizar imports nos arquivos CSS e JS
+  - [x] 4.4 Atualizar imports nos arquivos CSS e JS
     - Ajustar paths de imports para refletir nova estrutura
     - Usar aliases configurados no Vite (@, @css, @img)
     - Testar que não há erros de módulos não encontrados
     - _Requisitos: 3.3_
 
-- [ ] 4.5 Escrever testes de integração para assets
+- [x] 4.5 Escrever testes de integração para assets
   - Criar teste que verifica existência de manifest.json após build
   - Criar teste que valida entry points no manifest
   - _Requisitos: 5.4_
 
-- [ ] 5. Criar estrutura de layouts e componentes Blade
-  - [ ] 5.1 Criar layout principal app.blade.php
+- [x] 5. Criar estrutura de layouts e componentes Blade
+  - [x] 5.1 Criar layout principal app.blade.php
     - Criar resources/views/layouts/app.blade.php
     - Implementar estrutura HTML5 com meta tags apropriadas
     - Adicionar diretivas @vite para carregar assets
@@ -94,77 +94,77 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Incluir estrutura de layout do Vuexy (layout-wrapper, layout-container)
     - _Requisitos: 6.1, 6.3, 11.1, 11.2_
 
-  - [ ] 5.2 Criar componente Blade para sidebar
+  - [x] 5.2 Criar componente Blade para sidebar
     - Criar resources/views/components/sidebar.blade.php
     - Implementar menu lateral com estrutura do Vuexy
     - Adicionar itens de menu de exemplo
     - Implementar lógica para marcar item ativo baseado na rota
     - _Requisitos: 6.2_
 
-  - [ ] 5.3 Criar componente Blade para navbar
+  - [x] 5.3 Criar componente Blade para navbar
     - Criar resources/views/components/navbar.blade.php
     - Implementar barra de navegação superior
     - Adicionar toggle para menu mobile
     - Adicionar área de notificações e perfil (placeholder)
     - _Requisitos: 6.2_
 
-  - [ ] 5.4 Criar componente Blade para footer
+  - [x] 5.4 Criar componente Blade para footer
     - Criar resources/views/components/footer.blade.php
     - Adicionar informações de copyright
     - Adicionar links úteis (placeholder)
     - _Requisitos: 6.2_
 
-  - [ ] 5.5 Escrever teste de propriedade para layouts Blade
+  - [x] 5.5 Escrever teste de propriedade para layouts Blade
     - **Property 5: Layouts Blade Usam Seções Dinâmicas**
     - **Valida: Requisito 6.3**
     - Criar teste que verifica presença de @yield ou @section em layouts
     - Validar que layouts permitem conteúdo dinâmico
 
-  - [ ] 5.6 Escrever teste de propriedade para herança de componentes
+  - [x] 5.6 Escrever teste de propriedade para herança de componentes
     - **Property 6: Views Herdam Componentes do Layout**
     - **Valida: Requisitos 3.4, 6.5**
     - Criar teste que verifica se views que estendem layouts incluem todos os componentes
     - Validar presença de sidebar, navbar e footer no HTML renderizado
 
-- [ ] 6. Checkpoint - Verificar layouts e componentes
+- [-] 6. Checkpoint - Verificar layouts e componentes
   - Executar `npm run build` para compilar assets atualizados
   - Criar view de teste temporária que estende o layout
   - Verificar que todos os componentes são renderizados corretamente
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
 - [ ] 7. Implementar rotas e controllers de exemplo
-  - [ ] 7.1 Criar DashboardController
+  - [~] 7.1 Criar DashboardController
     - Criar app/Http/Controllers/DashboardController.php
     - Implementar método index() que retorna view dashboard
     - Adicionar método privado getDashboardStats() com dados de exemplo
     - _Requisitos: 7.2_
 
-  - [ ] 7.2 Criar PageController
+  - [~] 7.2 Criar PageController
     - Criar app/Http/Controllers/PageController.php
     - Implementar métodos accountSettings() e profile()
     - Cada método deve retornar sua respectiva view
     - _Requisitos: 7.2_
 
-  - [ ] 7.3 Definir rotas no web.php
+  - [~] 7.3 Definir rotas no web.php
     - Adicionar rota principal '/' apontando para DashboardController@index
     - Adicionar grupo de rotas 'pages' com prefix e name
     - Adicionar rotas para account-settings e profile
     - _Requisitos: 7.1, 7.3_
 
-  - [ ] 7.4 Escrever teste de propriedade para renderização de rotas
+  - [~] 7.4 Escrever teste de propriedade para renderização de rotas
     - **Property 4: Rotas Renderizam Páginas Válidas**
     - **Valida: Requisitos 7.3, 7.4**
     - Criar teste que verifica todas as rotas GET definidas
     - Validar status 200 e estrutura HTML válida para cada rota
 
-  - [ ] 7.5 Escrever testes unitários para controllers
+  - [~] 7.5 Escrever testes unitários para controllers
     - Testar DashboardController::index retorna view correta
     - Testar que dashboard inclui componentes do layout
     - Testar PageController retorna views corretas
     - _Requisitos: 7.4_
 
 - [ ] 8. Criar views para páginas de exemplo
-  - [ ] 8.1 Criar view dashboard.blade.php
+  - [~] 8.1 Criar view dashboard.blade.php
     - Criar resources/views/dashboard.blade.php
     - Estender layout principal usando @extends
     - Implementar seção @section('content') com conteúdo do dashboard
@@ -172,75 +172,75 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Usar estrutura e classes do template Vuexy
     - _Requisitos: 3.4, 3.5, 6.4_
 
-  - [ ] 8.2 Criar views para páginas adicionais
+  - [~] 8.2 Criar views para páginas adicionais
     - Criar resources/views/pages/account-settings.blade.php
     - Criar resources/views/pages/profile.blade.php
     - Cada view deve estender o layout principal
     - Implementar conteúdo de exemplo usando componentes Bootstrap 5
     - _Requisitos: 6.4, 7.3_
 
-- [ ] 8.3 Escrever testes de feature para views
+- [~] 8.3 Escrever testes de feature para views
   - Testar que dashboard carrega com status 200
   - Testar que views incluem título correto
   - Testar que componentes visuais estão presentes
   - _Requisitos: 6.5_
 
 - [ ] 9. Configurar banco de dados e models
-  - [ ] 9.1 Atualizar arquivo .env.example com configurações de banco
+  - [~] 9.1 Atualizar arquivo .env.example com configurações de banco
     - Adicionar variáveis DB_CONNECTION, DB_HOST, DB_PORT
     - Adicionar DB_DATABASE, DB_USERNAME, DB_PASSWORD
     - Documentar valores padrão recomendados
     - _Requisitos: 8.1, 12.1_
 
-  - [ ] 9.2 Criar migration para adicionar campos ao model User
+  - [~] 9.2 Criar migration para adicionar campos ao model User
     - Criar migration add_profile_fields_to_users_table
     - Adicionar campos avatar (string, nullable) e role (string, default 'user')
     - Implementar métodos up() e down()
     - _Requisitos: 8.2_
 
-  - [ ] 9.3 Atualizar model User
+  - [~] 9.3 Atualizar model User
     - Adicionar campos 'avatar' e 'role' ao array $fillable
     - Manter configuração de $hidden e $casts
     - _Requisitos: 8.3_
 
-  - [ ] 9.4 Escrever testes unitários para model User
+  - [~] 9.4 Escrever testes unitários para model User
     - Testar que campos fillable estão configurados corretamente
     - Testar que campos hidden não aparecem em JSON
     - Testar casting de password
     - _Requisitos: 8.3_
 
 - [ ] 10. Implementar tratamento de erros e páginas de erro customizadas
-  - [ ] 10.1 Criar view de erro 404
+  - [~] 10.1 Criar view de erro 404
     - Criar resources/views/errors/404.blade.php
     - Estender layout principal
     - Implementar design de página não encontrada usando template Vuexy
     - _Requisitos: 11.5_
 
-  - [ ] 10.2 Configurar logging apropriado
+  - [~] 10.2 Configurar logging apropriado
     - Verificar configuração em config/logging.php
     - Garantir que canal 'daily' está configurado
     - Definir retenção de logs para 14 dias
     - _Requisitos: 12.3_
 
-  - [ ] 10.3 Escrever testes para páginas de erro
+  - [~] 10.3 Escrever testes para páginas de erro
     - Testar que rota inexistente retorna 404
     - Testar que página 404 usa layout do template
     - _Requisitos: 11.5_
 
 - [ ] 11. Validar compatibilidade e responsividade de assets
-  - [ ] 11.1 Escrever teste de propriedade para existência de assets
+  - [~] 11.1 Escrever teste de propriedade para existência de assets
     - **Property 3: Assets Referenciados Existem**
     - **Valida: Requisitos 3.2, 11.1, 11.2, 11.3, 11.4**
     - Criar teste que extrai referências de assets do HTML renderizado
     - Validar que cada asset referenciado existe no sistema de arquivos
 
-  - [ ] 11.2 Criar testes de integração para assets
+  - [~] 11.2 Criar testes de integração para assets
     - Testar que CSS é carregado sem erros 404
     - Testar que JavaScript é carregado sem erros 404
     - Testar que imagens principais são carregadas
     - _Requisitos: 11.1, 11.2, 11.3_
 
-- [ ] 12. Checkpoint - Verificar funcionalidade completa do starter-kit
+- [~] 12. Checkpoint - Verificar funcionalidade completa do starter-kit
   - Executar `php artisan migrate` e verificar que migrations funcionam
   - Executar `npm run build` e verificar build sem erros
   - Iniciar servidor e navegar por todas as rotas criadas
@@ -248,12 +248,12 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
 - [ ] 13. Criar documentação README.md
-  - [ ] 13.1 Escrever seção de requisitos do sistema
+  - [~] 13.1 Escrever seção de requisitos do sistema
     - Listar versões necessárias de PHP, Composer, Node, NPM
     - Listar extensões PHP necessárias
     - _Requisitos: 9.1, 12.5_
 
-  - [ ] 13.2 Escrever instruções de instalação
+  - [~] 13.2 Escrever instruções de instalação
     - Documentar passo a passo: clone, composer install, npm install
     - Documentar configuração do .env
     - Documentar geração de APP_KEY
@@ -261,43 +261,43 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Documentar execução de migrations
     - _Requisitos: 9.2, 12.4_
 
-  - [ ] 13.3 Escrever instruções de desenvolvimento
+  - [~] 13.3 Escrever instruções de desenvolvimento
     - Documentar comando para servidor de desenvolvimento
     - Documentar comando para compilar assets (dev e build)
     - Documentar comando para executar testes
     - _Requisitos: 9.3, 9.4_
 
-  - [ ] 13.4 Documentar estrutura do projeto
+  - [~] 13.4 Documentar estrutura do projeto
     - Criar diagrama ou lista da estrutura de diretórios
     - Explicar propósito de cada diretório principal
     - Documentar onde adicionar novos componentes
     - _Requisitos: 9.5_
 
-  - [ ] 13.5 Documentar como criar novas páginas
+  - [~] 13.5 Documentar como criar novas páginas
     - Fornecer exemplo de criação de nova rota
     - Fornecer exemplo de criação de novo controller
     - Fornecer exemplo de criação de nova view usando layout
     - _Requisitos: 9.6_
 
 - [ ] 14. Validar conformidade com PSR-12 e boas práticas
-  - [ ] 14.1 Escrever teste de propriedade para namespaces PSR-4
+  - [~] 14.1 Escrever teste de propriedade para namespaces PSR-4
     - **Property 7: Namespaces Seguem PSR-4**
     - **Valida: Requisito 10.2**
     - Criar teste que verifica correspondência entre namespaces e estrutura de diretórios
     - Validar todas as classes PHP no projeto
 
-  - [ ] 14.2 Executar análise estática de código
+  - [~] 14.2 Executar análise estática de código
     - Instalar PHP_CodeSniffer ou Laravel Pint
     - Executar análise e corrigir problemas de estilo
     - _Requisitos: 10.6_
 
-  - [ ] 14.3 Adicionar comentários em código complexo
+  - [~] 14.3 Adicionar comentários em código complexo
     - Revisar todos os arquivos criados
     - Adicionar docblocks em métodos públicos
     - Adicionar comentários inline onde lógica não é óbvia
     - _Requisitos: 10.5_
 
-- [ ] 15. Checkpoint final - Validação completa do starter-kit
+- [~] 15. Checkpoint final - Validação completa do starter-kit
   - Executar suite completa de testes (unitários e de propriedades)
   - Executar build de produção e verificar otimização de assets
   - Revisar documentação para garantir clareza e completude
@@ -305,44 +305,44 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
 - [ ] 16. Criar branch full-version e adicionar conteúdo adicional
-  - [ ] 16.1 Criar nova branch a partir do starter-kit
+  - [~] 16.1 Criar nova branch a partir do starter-kit
     - Criar branch "template/laravel/bootstrap/full" a partir da branch starter
     - Verificar que todo o conteúdo do starter está presente
     - _Requisitos: 1.2, 1.4_
 
-  - [ ] 16.2 Integrar assets adicionais do template full-version
+  - [~] 16.2 Integrar assets adicionais do template full-version
     - Copiar assets CSS adicionais da pasta full-version para resources/css/
     - Copiar assets JavaScript adicionais para resources/js/
     - Copiar imagens e recursos adicionais para resources/images/
     - Atualizar vite.config.js se necessário para novos entry points
     - _Requisitos: 4.1, 4.2, 4.3_
 
-  - [ ] 16.3 Criar componentes Blade adicionais para full-version
+  - [~] 16.3 Criar componentes Blade adicionais para full-version
     - Analisar páginas do template full-version
     - Criar componentes reutilizáveis para elementos comuns (cards, modals, etc)
     - Organizar componentes em resources/views/components/
     - _Requisitos: 4.2, 6.2_
 
-  - [ ] 16.4 Criar rotas e controllers para todas as páginas do template
+  - [~] 16.4 Criar rotas e controllers para todas as páginas do template
     - Mapear todas as páginas HTML do template full-version
     - Criar controllers apropriados para cada seção
     - Definir rotas organizadas por grupos (ui, pages, forms, tables, etc)
     - _Requisitos: 4.2, 7.5_
 
-  - [ ] 16.5 Criar views Blade para todas as páginas do template
+  - [~] 16.5 Criar views Blade para todas as páginas do template
     - Converter páginas HTML do full-version para Blade
     - Garantir que todas estendem o layout principal
     - Substituir conteúdo estático por seções dinâmicas onde apropriado
     - Manter fidelidade visual ao template original
     - _Requisitos: 4.4, 4.5_
 
-  - [ ] 16.6 Escrever testes para páginas adicionais
+  - [~] 16.6 Escrever testes para páginas adicionais
     - Testar que todas as rotas da full-version retornam 200
     - Testar que páginas incluem componentes corretos
     - Validar estrutura HTML de páginas principais
     - _Requisitos: 4.5, 7.5_
 
-- [ ] 17. Checkpoint - Validação da full-version
+- [~] 17. Checkpoint - Validação da full-version
   - Executar build e verificar que todos os assets são compilados
   - Navegar por todas as páginas criadas
   - Verificar que não há erros 404 de assets
@@ -350,40 +350,40 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
 - [ ] 18. Atualizar documentação para full-version
-  - [ ] 18.1 Atualizar README.md com informações específicas
+  - [~] 18.1 Atualizar README.md com informações específicas
     - Documentar diferenças entre starter e full-version
     - Listar todas as páginas disponíveis na full-version
     - Atualizar estrutura de diretórios se houver mudanças
     - _Requisitos: 9.1, 9.5_
 
-  - [ ] 18.2 Criar documentação de componentes
+  - [~] 18.2 Criar documentação de componentes
     - Documentar componentes Blade disponíveis
     - Fornecer exemplos de uso de cada componente
     - Documentar props e slots aceitos
     - _Requisitos: 9.6_
 
 - [ ] 19. Validação final e testes de aceitação
-  - [ ] 19.1 Executar suite completa de testes em ambas as branches
+  - [~] 19.1 Executar suite completa de testes em ambas as branches
     - Checkout na branch starter e executar todos os testes
     - Checkout na branch full e executar todos os testes
     - Verificar cobertura de testes
     - _Requisitos: todos_
 
-  - [ ] 19.2 Realizar testes manuais de responsividade
+  - [~] 19.2 Realizar testes manuais de responsividade
     - Testar páginas principais em resoluções mobile (375px, 414px)
     - Testar em resoluções tablet (768px, 1024px)
     - Testar em resoluções desktop (1920px, 2560px)
     - Verificar que menu mobile funciona corretamente
     - _Requisitos: 11.5_
 
-  - [ ] 19.3 Validar compatibilidade de navegadores
+  - [~] 19.3 Validar compatibilidade de navegadores
     - Testar em Chrome (última versão)
     - Testar em Firefox (última versão)
     - Testar em Safari (se disponível)
     - Testar em Edge (última versão)
     - _Requisitos: 11.1, 11.2, 11.3, 11.4_
 
-- [ ] 20. Checkpoint final - Entrega
+- [~] 20. Checkpoint final - Entrega
   - Revisar checklist completo de requisitos
   - Garantir que ambas as branches estão funcionais e documentadas
   - Verificar que não há código comentado ou arquivos temporários

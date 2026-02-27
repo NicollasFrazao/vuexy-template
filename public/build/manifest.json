@@ -1,0 +1,174 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-tn0RQdqM.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/core.css": {
+    "file": "assets/core-CxZHfB-b.css",
+    "src": "resources/css/core.css",
+    "isEntry": true
+  },
+  "resources/css/demo.css": {
+    "file": "assets/demo-Ct9D1Bdk.css",
+    "src": "resources/css/demo.css",
+    "isEntry": true
+  },
+  "resources/css/theme-default.css": {
+    "file": "assets/app-tn0RQdqM.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/images/avatars/1.png": {
+    "file": "assets/1-DBLIAtkk.png",
+    "src": "resources/images/avatars/1.png"
+  },
+  "resources/images/avatars/10.png": {
+    "file": "assets/10-DHx5rK1I.png",
+    "src": "resources/images/avatars/10.png"
+  },
+  "resources/images/avatars/11.png": {
+    "file": "assets/11-BO2pxxcJ.png",
+    "src": "resources/images/avatars/11.png"
+  },
+  "resources/images/avatars/12.png": {
+    "file": "assets/12-D9y7DS_i.png",
+    "src": "resources/images/avatars/12.png"
+  },
+  "resources/images/avatars/13.png": {
+    "file": "assets/13-Zs4mSOMR.png",
+    "src": "resources/images/avatars/13.png"
+  },
+  "resources/images/avatars/14.png": {
+    "file": "assets/14-DdY4i5kA.png",
+    "src": "resources/images/avatars/14.png"
+  },
+  "resources/images/avatars/15.png": {
+    "file": "assets/15-CShjgP6_.png",
+    "src": "resources/images/avatars/15.png"
+  },
+  "resources/images/avatars/2.png": {
+    "file": "assets/2-BXys535C.png",
+    "src": "resources/images/avatars/2.png"
+  },
+  "resources/images/avatars/3.png": {
+    "file": "assets/3-DHl9k9P6.png",
+    "src": "resources/images/avatars/3.png"
+  },
+  "resources/images/avatars/4.png": {
+    "file": "assets/4-B4WDez9W.png",
+    "src": "resources/images/avatars/4.png"
+  },
+  "resources/images/avatars/5.png": {
+    "file": "assets/5-Bbp712r4.png",
+    "src": "resources/images/avatars/5.png"
+  },
+  "resources/images/avatars/6.png": {
+    "file": "assets/6-Dt8Drd3r.png",
+    "src": "resources/images/avatars/6.png"
+  },
+  "resources/images/avatars/7.png": {
+    "file": "assets/7-BxLJWFbN.png",
+    "src": "resources/images/avatars/7.png"
+  },
+  "resources/images/avatars/8.png": {
+    "file": "assets/8-kFtCq_K0.png",
+    "src": "resources/images/avatars/8.png"
+  },
+  "resources/images/avatars/9.png": {
+    "file": "assets/9-CYvqZDX3.png",
+    "src": "resources/images/avatars/9.png"
+  },
+  "resources/images/customizer/content-compact.svg": {
+    "file": "assets/content-compact-QIM5f1cK.svg",
+    "src": "resources/images/customizer/content-compact.svg"
+  },
+  "resources/images/customizer/content-wide.svg": {
+    "file": "assets/content-wide-Dp8BMDlT.svg",
+    "src": "resources/images/customizer/content-wide.svg"
+  },
+  "resources/images/customizer/direction-ltr.svg": {
+    "file": "assets/direction-ltr-DYdq2Kkw.svg",
+    "src": "resources/images/customizer/direction-ltr.svg"
+  },
+  "resources/images/customizer/direction-rtl.svg": {
+    "file": "assets/direction-rtl-CBPIp4iH.svg",
+    "src": "resources/images/customizer/direction-rtl.svg"
+  },
+  "resources/images/customizer/horizontal-fixed.svg": {
+    "file": "assets/horizontal-fixed-CYGEP0t-.svg",
+    "src": "resources/images/customizer/horizontal-fixed.svg"
+  },
+  "resources/images/customizer/horizontal-static.svg": {
+    "file": "assets/horizontal-static-BJ3bdPsz.svg",
+    "src": "resources/images/customizer/horizontal-static.svg"
+  },
+  "resources/images/customizer/layouts-collapsed.svg": {
+    "file": "assets/layouts-collapsed-BzbfNpHX.svg",
+    "src": "resources/images/customizer/layouts-collapsed.svg"
+  },
+  "resources/images/customizer/layouts-expanded.svg": {
+    "file": "assets/skin-default-BR95s9pf.svg",
+    "src": "resources/images/customizer/skin-default.svg"
+  },
+  "resources/images/customizer/navbar-hidden.svg": {
+    "file": "assets/navbar-hidden-EQS7qybl.svg",
+    "src": "resources/images/customizer/navbar-hidden.svg"
+  },
+  "resources/images/customizer/navbar-static.svg": {
+    "file": "assets/navbar-static-Dd_fCUZM.svg",
+    "src": "resources/images/customizer/navbar-static.svg"
+  },
+  "resources/images/customizer/navbar-sticky.svg": {
+    "file": "assets/navbar-sticky-Cm7Csruj.svg",
+    "src": "resources/images/customizer/navbar-sticky.svg"
+  },
+  "resources/images/customizer/skin-border.svg": {
+    "file": "assets/skin-border-hOGOJ06F.svg",
+    "src": "resources/images/customizer/skin-border.svg"
+  },
+  "resources/images/customizer/skin-default.svg": {
+    "file": "assets/skin-default-BR95s9pf.svg",
+    "src": "resources/images/customizer/skin-default.svg"
+  },
+  "resources/images/favicon/favicon.ico": {
+    "file": "assets/favicon-eOJdZ5Gd.ico",
+    "src": "resources/images/favicon/favicon.ico"
+  },
+  "resources/images/illustrations/bg-shape-image-dark.png": {
+    "file": "assets/bg-shape-image-dark-D4eSvDKH.png",
+    "src": "resources/images/illustrations/bg-shape-image-dark.png"
+  },
+  "resources/images/illustrations/bg-shape-image-light.png": {
+    "file": "assets/bg-shape-image-light-DLSOvVbs.png",
+    "src": "resources/images/illustrations/bg-shape-image-light.png"
+  },
+  "resources/images/illustrations/page-misc-error.png": {
+    "file": "assets/page-misc-error-EKd0TG82.png",
+    "src": "resources/images/illustrations/page-misc-error.png"
+  },
+  "resources/images/illustrations/page-misc-launching-soon.png": {
+    "file": "assets/page-misc-launching-soon-BJShZJtk.png",
+    "src": "resources/images/illustrations/page-misc-launching-soon.png"
+  },
+  "resources/images/illustrations/page-misc-under-maintenance.png": {
+    "file": "assets/page-misc-under-maintenance-B4LyEceX.png",
+    "src": "resources/images/illustrations/page-misc-under-maintenance.png"
+  },
+  "resources/images/illustrations/page-misc-you-are-not-authorized.png": {
+    "file": "assets/page-misc-you-are-not-authorized-WlD8EAtk.png",
+    "src": "resources/images/illustrations/page-misc-you-are-not-authorized.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-AJHVr39y.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/template.js": {
+    "file": "assets/template-CpHXfBhn.js",
+    "name": "template",
+    "src": "resources/js/template.js",
+    "isEntry": true
+  }
+}

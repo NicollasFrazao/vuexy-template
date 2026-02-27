@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,21 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::prefix('pages')->name('pages.')->group(function () {
-    Route::get('/account-settings', function () {
-        return view('pages.account-settings');
-    })->name('account-settings');
+    Route::get('/account-settings', [PageController::class, 'accountSettings'])
+        ->name('account-settings');
     
-    Route::get('/profile', function () {
-        return view('pages.profile');
-    })->name('profile');
+    Route::get('/profile', [PageController::class, 'profile'])
+        ->name('profile');
 });
-
-// Temporary test route for checkpoint verification
-Route::get('/test-layout', function () {
-    return view('test-layout');
-})->name('test-layout');

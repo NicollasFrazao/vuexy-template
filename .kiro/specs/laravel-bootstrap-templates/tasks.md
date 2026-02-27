@@ -126,45 +126,45 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Criar teste que verifica se views que estendem layouts incluem todos os componentes
     - Validar presença de sidebar, navbar e footer no HTML renderizado
 
-- [-] 6. Checkpoint - Verificar layouts e componentes
+- [x] 6. Checkpoint - Verificar layouts e componentes
   - Executar `npm run build` para compilar assets atualizados
   - Criar view de teste temporária que estende o layout
   - Verificar que todos os componentes são renderizados corretamente
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
-- [ ] 7. Implementar rotas e controllers de exemplo
-  - [~] 7.1 Criar DashboardController
+- [x] 7. Implementar rotas e controllers de exemplo
+  - [x] 7.1 Criar DashboardController
     - Criar app/Http/Controllers/DashboardController.php
     - Implementar método index() que retorna view dashboard
     - Adicionar método privado getDashboardStats() com dados de exemplo
     - _Requisitos: 7.2_
 
-  - [~] 7.2 Criar PageController
+  - [x] 7.2 Criar PageController
     - Criar app/Http/Controllers/PageController.php
     - Implementar métodos accountSettings() e profile()
     - Cada método deve retornar sua respectiva view
     - _Requisitos: 7.2_
 
-  - [~] 7.3 Definir rotas no web.php
+  - [x] 7.3 Definir rotas no web.php
     - Adicionar rota principal '/' apontando para DashboardController@index
     - Adicionar grupo de rotas 'pages' com prefix e name
     - Adicionar rotas para account-settings e profile
     - _Requisitos: 7.1, 7.3_
 
-  - [~] 7.4 Escrever teste de propriedade para renderização de rotas
+  - [x] 7.4 Escrever teste de propriedade para renderização de rotas
     - **Property 4: Rotas Renderizam Páginas Válidas**
     - **Valida: Requisitos 7.3, 7.4**
     - Criar teste que verifica todas as rotas GET definidas
     - Validar status 200 e estrutura HTML válida para cada rota
 
-  - [~] 7.5 Escrever testes unitários para controllers
+  - [x] 7.5 Escrever testes unitários para controllers
     - Testar DashboardController::index retorna view correta
     - Testar que dashboard inclui componentes do layout
     - Testar PageController retorna views corretas
     - _Requisitos: 7.4_
 
-- [ ] 8. Criar views para páginas de exemplo
-  - [~] 8.1 Criar view dashboard.blade.php
+- [x] 8. Criar views para páginas de exemplo
+  - [x] 8.1 Criar view dashboard.blade.php
     - Criar resources/views/dashboard.blade.php
     - Estender layout principal usando @extends
     - Implementar seção @section('content') com conteúdo do dashboard
@@ -172,14 +172,14 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Usar estrutura e classes do template Vuexy
     - _Requisitos: 3.4, 3.5, 6.4_
 
-  - [~] 8.2 Criar views para páginas adicionais
+  - [x] 8.2 Criar views para páginas adicionais
     - Criar resources/views/pages/account-settings.blade.php
     - Criar resources/views/pages/profile.blade.php
     - Cada view deve estender o layout principal
     - Implementar conteúdo de exemplo usando componentes Bootstrap 5
     - _Requisitos: 6.4, 7.3_
 
-- [~] 8.3 Escrever testes de feature para views
+- [x] 8.3 Escrever testes de feature para views
   - Testar que dashboard carrega com status 200
   - Testar que views incluem título correto
   - Testar que componentes visuais estão presentes

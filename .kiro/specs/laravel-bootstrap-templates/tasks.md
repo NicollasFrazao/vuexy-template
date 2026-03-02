@@ -212,20 +212,20 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Manter configuração de $hidden e $casts
     - _Requisitos: 8.3_
 
-  - [~] 9.4 Escrever testes unitários para model User
+  - [x] 9.4 Escrever testes unitários para model User
     - Testar que campos fillable estão configurados corretamente
     - Testar que campos hidden não aparecem em JSON
     - Testar casting de password
     - _Requisitos: 8.3_
 
 - [ ] 9.5 Atualizar para Laravel 11.x e versões mais recentes
-  - [-] 9.5.1 Atualizar dependências do Composer
+  - [x] 9.5.1 Atualizar dependências do Composer
     - Atualizar composer.json para Laravel 11.x
     - Executar `composer update` para atualizar todas as dependências
     - Resolver conflitos de dependências se houver
     - _Requisitos: 1.3, 2.1_
 
-  - [~] 9.5.2 Atualizar configurações do Laravel 11
+  - [-] 9.5.2 Atualizar configurações do Laravel 11
     - Revisar e atualizar arquivos de configuração para Laravel 11
     - Verificar mudanças em config/app.php, config/database.php
     - Atualizar service providers se necessário

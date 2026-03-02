@@ -1,3 +1,16 @@
+{{--
+    Account Settings - Página de Configurações da Conta
+    
+    Esta view permite ao usuário gerenciar suas configurações pessoais:
+    - Upload e gerenciamento de foto de perfil
+    - Edição de informações pessoais (nome, email, organização)
+    - Configurações de localização (endereço, estado, país)
+    - Preferências de idioma, timezone e moeda
+    - Alteração de senha com validação de requisitos
+    - Opção de desativação/exclusão de conta
+    
+    Todos os formulários incluem proteção CSRF via @csrf.
+--}}
 @extends('layouts.app')
 
 @section('title', 'Account Settings')
@@ -5,12 +18,16 @@
 @section('content')
 <div class="row">
     <div class="col-md-12">
+        {{-- Account Details Card - Informações principais da conta --}}
         <div class="card mb-4">
             <h5 class="card-header">Account Details</h5>
             <div class="card-body">
+                {{-- Avatar Upload Section - Upload de foto de perfil --}}
                 <div class="d-flex align-items-start align-items-sm-center gap-4">
+                    {{-- Avatar atual gerado dinamicamente via UI Avatars --}}
                     <img src="https://ui-avatars.com/api/?name=John+Doe&size=100&background=696cff&color=fff" alt="user-avatar" class="d-block rounded" height="100" width="100" />
                     <div class="button-wrapper">
+                        {{-- Botão de upload com input file oculto --}}
                         <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
                             <span class="d-none d-sm-block">Upload new photo</span>
                             <i class="ti ti-upload d-block d-sm-none"></i>
@@ -26,9 +43,11 @@
             </div>
             <hr class="my-0">
             <div class="card-body">
+                {{-- Account Settings Form - Formulário de configurações da conta --}}
                 <form id="formAccountSettings" method="POST">
                     @csrf
                     <div class="row">
+                        {{-- Campos de informações pessoais organizados em grid responsivo --}}
                         <div class="mb-3 col-md-6">
                             <label for="firstName" class="form-label">First Name</label>
                             <input class="form-control" type="text" id="firstName" name="firstName" value="John" autofocus />
@@ -45,6 +64,7 @@
                             <label for="organization" class="form-label">Organization</label>
                             <input type="text" class="form-control" id="organization" name="organization" value="Vuexy Inc." />
                         </div>
+                        {{-- Phone Number com código de país --}}
                         <div class="mb-3 col-md-6">
                             <label class="form-label" for="phoneNumber">Phone Number</label>
                             <div class="input-group input-group-merge">
@@ -52,6 +72,7 @@
                                 <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="202 555 0111" />
                             </div>
                         </div>
+                        {{-- Campos de endereço --}}
                         <div class="mb-3 col-md-6">
                             <label for="address" class="form-label">Address</label>
                             <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
@@ -64,6 +85,7 @@
                             <label for="zipCode" class="form-label">Zip Code</label>
                             <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="231465" maxlength="6" />
                         </div>
+                        {{-- Dropdowns de preferências --}}
                         <div class="mb-3 col-md-6">
                             <label class="form-label" for="country">Country</label>
                             <select id="country" class="form-select">
@@ -108,6 +130,7 @@
                             </select>
                         </div>
                     </div>
+                    {{-- Botões de ação do formulário --}}
                     <div class="mt-2">
                         <button type="submit" class="btn btn-primary me-2">Save changes</button>
                         <button type="reset" class="btn btn-label-secondary">Cancel</button>
@@ -116,17 +139,19 @@
             </div>
         </div>
 
-        <!-- Change Password -->
+        {{-- Change Password Card - Alteração de senha --}}
         <div class="card mb-4">
             <h5 class="card-header">Change Password</h5>
             <div class="card-body">
                 <form id="formChangePassword" method="POST">
                     @csrf
+                    {{-- Alerta com requisitos de senha --}}
                     <div class="alert alert-warning" role="alert">
                         <h6 class="alert-heading mb-1">Ensure that these requirements are met</h6>
                         <span>Minimum 8 characters long, uppercase & symbol</span>
                     </div>
                     <div class="row">
+                        {{-- Campo de senha atual com toggle de visibilidade --}}
                         <div class="mb-3 col-md-6 form-password-toggle">
                             <label class="form-label" for="currentPassword">Current Password</label>
                             <div class="input-group input-group-merge">
@@ -136,6 +161,7 @@
                         </div>
                     </div>
                     <div class="row">
+                        {{-- Campos de nova senha e confirmação --}}
                         <div class="mb-3 col-md-6 form-password-toggle">
                             <label class="form-label" for="newPassword">New Password</label>
                             <div class="input-group input-group-merge">
@@ -150,6 +176,7 @@
                                 <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
                             </div>
                         </div>
+                        {{-- Lista de requisitos de senha --}}
                         <div class="col-12 mb-4">
                             <h6>Password Requirements:</h6>
                             <ul class="ps-3 mb-0">
@@ -166,17 +193,19 @@
             </div>
         </div>
 
-        <!-- Delete Account -->
+        {{-- Delete Account Card - Desativação/exclusão de conta --}}
         <div class="card">
             <h5 class="card-header">Delete Account</h5>
             <div class="card-body">
                 <div class="mb-3 col-12 mb-0">
+                    {{-- Alerta de aviso sobre exclusão permanente --}}
                     <div class="alert alert-warning">
                         <h6 class="alert-heading mb-1">Are you sure you want to delete your account?</h6>
                         <p class="mb-0">Once you delete your account, there is no going back. Please be certain.</p>
                     </div>
                 </div>
                 <form id="formAccountDeactivation">
+                    {{-- Checkbox de confirmação obrigatório --}}
                     <div class="form-check mb-3">
                         <input class="form-check-input" type="checkbox" name="accountActivation" id="accountActivation" />
                         <label class="form-check-label" for="accountActivation">I confirm my account deactivation</label>

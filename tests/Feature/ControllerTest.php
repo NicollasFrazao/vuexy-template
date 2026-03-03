@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ControllerTest extends TestCase
 {
@@ -15,11 +14,11 @@ class ControllerTest extends TestCase
     public function dashboard_controller_returns_correct_view()
     {
         $response = $this->get('/');
-        
+
         $response->assertStatus(200);
         $response->assertViewIs('dashboard');
     }
-    
+
     /**
      * Testa que DashboardController::index passa dados corretos para a view
      *
@@ -28,10 +27,10 @@ class ControllerTest extends TestCase
     public function dashboard_controller_passes_correct_data()
     {
         $response = $this->get('/');
-        
+
         $response->assertViewHas('pageTitle', 'Dashboard');
         $response->assertViewHas('stats');
-        
+
         // Verifica estrutura dos stats
         $stats = $response->viewData('stats');
         $this->assertIsArray($stats);
@@ -39,7 +38,7 @@ class ControllerTest extends TestCase
         $this->assertArrayHasKey('revenue', $stats);
         $this->assertArrayHasKey('orders', $stats);
     }
-    
+
     /**
      * Testa que dashboard inclui componentes do layout
      *
@@ -48,22 +47,22 @@ class ControllerTest extends TestCase
     public function dashboard_includes_layout_components()
     {
         $response = $this->get('/');
-        
+
         // Verifica presença do sidebar
         $response->assertSee('layout-menu', false);
         $response->assertSee('menu-inner', false);
-        
+
         // Verifica presença do navbar
         $response->assertSee('layout-navbar', false);
-        
+
         // Verifica presença do footer
         $response->assertSee('footer', false);
-        
+
         // Verifica estrutura do layout
         $response->assertSee('layout-wrapper', false);
         $response->assertSee('layout-container', false);
     }
-    
+
     /**
      * Testa que PageController::accountSettings retorna a view correta
      *
@@ -72,11 +71,11 @@ class ControllerTest extends TestCase
     public function page_controller_account_settings_returns_correct_view()
     {
         $response = $this->get('/pages/account-settings');
-        
+
         $response->assertStatus(200);
         $response->assertViewIs('pages.account-settings');
     }
-    
+
     /**
      * Testa que PageController::profile retorna a view correta
      *
@@ -85,11 +84,11 @@ class ControllerTest extends TestCase
     public function page_controller_profile_returns_correct_view()
     {
         $response = $this->get('/pages/profile');
-        
+
         $response->assertStatus(200);
         $response->assertViewIs('pages.profile');
     }
-    
+
     /**
      * Testa que páginas do PageController incluem componentes do layout
      *
@@ -101,17 +100,17 @@ class ControllerTest extends TestCase
             '/pages/account-settings',
             '/pages/profile',
         ];
-        
+
         foreach ($pages as $page) {
             $response = $this->get($page);
-            
+
             // Verifica presença dos componentes principais do layout
             $response->assertSee('layout-menu', false);
             $response->assertSee('layout-navbar', false);
             $response->assertSee('footer', false);
         }
     }
-    
+
     /**
      * Testa que todas as views dos controllers retornam HTML válido
      *
@@ -124,12 +123,12 @@ class ControllerTest extends TestCase
             '/pages/account-settings',
             '/pages/profile',
         ];
-        
+
         foreach ($routes as $route) {
             $response = $this->get($route);
-            
+
             $content = $response->getContent();
-            
+
             // Verifica estrutura HTML básica
             $this->assertStringContainsString('<!DOCTYPE html>', $content);
             $this->assertStringContainsString('<html', $content);
@@ -139,7 +138,7 @@ class ControllerTest extends TestCase
             $this->assertStringContainsString('</html>', $content);
         }
     }
-    
+
     /**
      * Testa que views incluem meta tags necessárias
      *
@@ -148,9 +147,9 @@ class ControllerTest extends TestCase
     public function controller_views_include_required_meta_tags()
     {
         $response = $this->get('/');
-        
+
         $content = $response->getContent();
-        
+
         // Verifica meta tags essenciais
         $this->assertStringContainsString('<meta charset="utf-8">', $content);
         $this->assertStringContainsString('name="viewport"', $content);

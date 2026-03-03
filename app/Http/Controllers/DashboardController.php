@@ -7,7 +7,7 @@ use Illuminate\View\View;
 class DashboardController extends Controller
 {
     /**
-     * Exibe o dashboard principal
+     * Exibe o dashboard principal com estatísticas de resumo.
      */
     public function index(): View
     {
@@ -16,16 +16,21 @@ class DashboardController extends Controller
             'stats' => $this->getDashboardStats(),
         ]);
     }
-    
+
     /**
-     * Obtém estatísticas para o dashboard
+     * Retorna dados de exemplo para os cards de estatísticas do dashboard.
+     *
+     * Em uma aplicação real, estes valores viriam de queries ao banco de dados
+     * (ex: User::count(), Order::sum('total'), etc.).
+     *
+     * @return array<string, int>
      */
     private function getDashboardStats(): array
     {
         return [
-            'users' => 1234,
-            'revenue' => 45678,
-            'orders' => 890,
+            'users' => 1234,    // Total de usuários cadastrados
+            'revenue' => 45678, // Receita total em centavos
+            'orders' => 890,    // Total de pedidos realizados
         ];
     }
 }

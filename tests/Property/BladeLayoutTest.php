@@ -6,11 +6,20 @@ use Eris\Generator;
 use Eris\TestTrait;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
-use Tests\TestCase;
+use Tests\PropertyTestCase;
 
-class BladeLayoutTest extends TestCase
+class BladeLayoutTest extends PropertyTestCase
 {
     use TestTrait;
+
+    /**
+     * Override Eris's getTestCaseAnnotations to fix PHPUnit 11 compatibility.
+     * PHPUnit 11 removed PHPUnit\Util\Test::parseTestMethodAnnotations().
+     */
+    public function getTestCaseAnnotations()
+    {
+        return [];
+    }
 
     /**
      * Feature: laravel-bootstrap-templates, Property 5: Layouts Blade Usam Seções Dinâmicas

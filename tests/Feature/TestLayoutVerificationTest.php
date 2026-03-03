@@ -42,7 +42,7 @@ class TestLayoutVerificationTest extends TestCase
         $content = $response->getContent();
         // In production, @vite is replaced with actual asset links
         $this->assertTrue(
-            str_contains($content, 'resources/css/app.css') || 
+            str_contains($content, 'resources/css/app.css') ||
             str_contains($content, 'resources/js/app.js') ||
             str_contains($content, '/build/'),
             'Layout should reference Vite-processed assets'

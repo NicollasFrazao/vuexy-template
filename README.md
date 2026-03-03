@@ -2,6 +2,109 @@
 
 A modern Laravel application integrated with the Vuexy Bootstrap 5 admin template, providing a complete foundation for building professional web applications.
 
+## 📋 Version Requirements
+
+| Component | Version | Notes |
+|-----------|---------|-------|
+| PHP | 8.2+ | Required for Laravel 11 |
+| Laravel | 11.x (11.48.0+) | Uses simplified app structure |
+| MySQL | 9.1 | |
+| Node.js | 22.x LTS (22.22.0+) | |
+| Composer | 2.x | |
+| NPM | 10.x | Bundled with Node 22 |
+
+### Laravel 11 Changes
+
+Laravel 11 introduced a significantly simplified application structure compared to Laravel 10:
+
+- **No more `app/Http/Kernel.php`** — middleware is now registered in `bootstrap/app.php`
+- **No more `app/Console/Kernel.php`** — console commands are registered in `routes/console.php`
+- **No more `app/Exceptions/Handler.php`** — exception handling is configured in `bootstrap/app.php`
+- **Slimmer `config/` directory** — many config files removed; defaults come from the framework
+- **`bootstrap/app.php` is the new central configuration point** for middleware, routing, and exceptions
+- **`routes/console.php`** replaces the console kernel for scheduling and command registration
+- **Minimum PHP 8.2** is required (PHP 8.1 is no longer supported)
+
+### Compatibility Notes
+
+- This project targets **Laravel 11.x** and is not backward compatible with Laravel 10.x or earlier
+- PHP 8.1 is **not supported** — upgrade to PHP 8.2+ before installing
+- MySQL 8.0+ is compatible, but MySQL 9.1 is the tested and recommended version
+- Node.js 18.x and 20.x may work but Node 22.x LTS is the tested version
+- If you are migrating from Laravel 10, refer to the [official upgrade guide](https://laravel.com/docs/11.x/upgrade)
+
+## 🖥️ System Requirements
+
+Before installing, make sure your environment meets the following requirements.
+
+### Software Versions
+
+See the [Version Requirements](#-version-requirements) table above for the exact versions needed.
+
+### PHP Extensions
+
+The following PHP extensions are required and must be enabled:
+
+| Extension | Purpose |
+|-----------|---------|
+| `pdo` | Database abstraction layer |
+| `pdo_mysql` | MySQL driver for PDO |
+| `mbstring` | Multi-byte string handling |
+| `openssl` | Encryption and HTTPS support |
+| `tokenizer` | Required by Laravel |
+| `xml` | XML parsing |
+| `ctype` | Character type checking |
+| `json` | JSON encoding/decoding |
+| `bcmath` | Arbitrary precision math |
+| `fileinfo` | File MIME type detection |
+| `curl` | HTTP client support |
+| `zip` | ZIP archive handling (Composer) |
+| `intl` | Internationalization support |
+
+To check which extensions are enabled:
+
+```bash
+php -m
+```
+
+To verify a specific extension:
+
+```bash
+php -m | grep pdo
+```
+
+### Database
+
+- **MySQL 9.1** is the tested and recommended version
+- MySQL 8.0+ is compatible but not officially tested
+- MariaDB is **not supported** — use MySQL
+
+### Operating System
+
+- Linux (Ubuntu 22.04+ / Debian 12+ recommended)
+- macOS 13+ (via Docker)
+- Windows 10/11 with WSL2 (via Docker)
+
+### Docker (Recommended)
+
+If using the Docker-based setup (recommended):
+
+- Docker Engine 20.10+
+- Docker Compose v2.x (plugin) or 1.29+ (standalone)
+- `make` utility
+
+All PHP extensions and services are pre-configured in the Docker images — no manual extension installation needed.
+
+### Without Docker (Manual Setup)
+
+If running without Docker, ensure the following are installed and configured on your host:
+
+- PHP 8.2+ with all extensions listed above
+- Composer 2.x
+- Node.js 22.x LTS with NPM 10.x
+- MySQL 9.1 server running and accessible
+- A web server (Nginx or Apache) configured to serve the `public/` directory
+
 ## 🎯 Features
 
 - **Laravel 11.x** - Latest PHP framework
@@ -43,6 +146,291 @@ This single command will:
 
 🌐 **Application**: http://localhost:8000  
 🔥 **Vite HMR**: http://localhost:5173
+
+## 🔧 Installation
+
+### Option 1: Docker (Recommended)
+
+This is the easiest way to get started. All services (PHP, MySQL, Redis, Node.js) are pre-configured.
+
+#### Step 1 — Clone the repository
+
+```bash
+git clone <repository-url> vuexy-laravel
+cd vuexy-laravel
+git checkout template/laravel/bootstrap/starter
+```
+
+#### Step 2 — Configure the environment
+
+Copy the example environment file and adjust as needed:
+
+```bash
+cp .env.example .env
+```
+
+Key variables to review in `.env`:
+
+```env
+APP_NAME="Vuexy Laravel"
+APP_URL=http://localhost:8000
+
+# Docker uses the service name 'mysql' as the host
+DB_HOST=mysql
+DB_DATABASE=vuexy_laravel
+DB_USERNAME=vuexy
+DB_PASSWORD=secret
+```
+
+> The default values work out of the box with Docker — no changes required for local development.
+
+#### Step 3 — Build and start containers
+
+```bash
+make build   # Build Docker images (only needed the first time)
+make up      # Start all containers in the background
+```
+
+#### Step 4 — Install PHP dependencies
+
+```bash
+make composer-install
+```
+
+#### Step 5 — Generate the application key
+
+```bash
+make artisan CMD="key:generate"
+```
+
+This sets `APP_KEY` in your `.env` file. The application will not run without it.
+
+#### Step 6 — Configure the database and run migrations
+
+The Docker MySQL container is created automatically with the credentials from `.env`. Run the migrations:
+
+```bash
+make migrate
+```
+
+#### Step 7 — Install Node dependencies and compile assets
+
+```bash
+make npm-install
+make npm-build
+```
+
+#### Step 8 — Access the application
+
+Open http://localhost:8000 in your browser.
+
+---
+
+### Option 2: Manual Installation (Without Docker)
+
+Use this approach if you prefer to run PHP, MySQL, and Node.js directly on your host machine.
+
+#### Prerequisites
+
+Ensure the following are installed and running:
+
+- PHP 8.2+ with extensions: `pdo`, `pdo_mysql`, `mbstring`, `openssl`, `tokenizer`, `xml`, `ctype`, `json`, `bcmath`, `fileinfo`, `curl`, `zip`, `intl`
+- Composer 2.x
+- Node.js 22.x LTS with NPM 10.x
+- MySQL 9.1 server
+
+#### Step 1 — Clone the repository
+
+```bash
+git clone <repository-url> vuexy-laravel
+cd vuexy-laravel
+git checkout template/laravel/bootstrap/starter
+```
+
+#### Step 2 — Install PHP dependencies
+
+```bash
+composer install
+```
+
+#### Step 3 — Configure the environment
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and update the database connection to point to your local MySQL server:
+
+```env
+APP_NAME="Vuexy Laravel"
+APP_URL=http://localhost:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=vuexy_laravel
+DB_USERNAME=your_mysql_user
+DB_PASSWORD=your_mysql_password
+```
+
+#### Step 4 — Generate the application key
+
+```bash
+php artisan key:generate
+```
+
+This writes a unique `APP_KEY` value into your `.env` file. Never share or commit this key.
+
+#### Step 5 — Configure the database
+
+Create the database in MySQL:
+
+```sql
+CREATE DATABASE vuexy_laravel CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+Then run the migrations:
+
+```bash
+php artisan migrate
+```
+
+#### Step 6 — Install Node dependencies and compile assets
+
+```bash
+npm install
+npm run build
+```
+
+#### Step 7 — Start the development server
+
+```bash
+php artisan serve
+```
+
+The application will be available at http://localhost:8000.
+
+---
+
+### One-Command Setup (Docker only)
+
+If you just want to get running as fast as possible:
+
+```bash
+cp .env.example .env
+make install
+```
+
+`make install` runs all the steps above (build, up, composer install, key:generate, migrate, npm install, npm build) in one go.
+
+---
+
+## 💻 Development
+
+### Starting the Development Server
+
+#### With Docker (recommended)
+
+```bash
+make up
+```
+
+The application will be available at http://localhost:8000. The PHP-FPM container serves the Laravel app through Nginx automatically — no separate `artisan serve` needed.
+
+If you need to run `artisan serve` explicitly inside the container:
+
+```bash
+docker compose exec app php artisan serve --host=0.0.0.0 --port=8000
+```
+
+#### Without Docker (manual)
+
+```bash
+php artisan serve
+```
+
+The application will be available at http://localhost:8000.
+
+---
+
+### Compiling Assets
+
+#### Development build (with hot-reload / HMR)
+
+With Docker:
+
+```bash
+make npm-dev
+# or watch for changes continuously:
+make npm-watch
+```
+
+Without Docker:
+
+```bash
+npm run dev
+```
+
+Vite will start a dev server at http://localhost:5173 and automatically reload the browser when you change JavaScript or CSS files.
+
+#### Production build
+
+With Docker:
+
+```bash
+make npm-build
+```
+
+Without Docker:
+
+```bash
+npm run build
+```
+
+Compiled assets are written to `public/build/`. Always run a production build before deploying.
+
+---
+
+### Running Tests
+
+#### With Docker
+
+```bash
+# Run the full test suite
+make test
+
+# Run a specific test class or method
+make test-filter FILTER=DashboardTest
+
+# Run with code coverage report
+make test-coverage
+```
+
+Or directly via Artisan inside the container:
+
+```bash
+docker compose exec app php artisan test
+```
+
+#### Without Docker
+
+```bash
+php artisan test
+```
+
+Run a specific test:
+
+```bash
+php artisan test --filter=DashboardTest
+```
+
+Run with coverage (requires Xdebug or PCOV):
+
+```bash
+php artisan test --coverage
+```
+
+---
 
 ## 📦 Docker Services
 
@@ -205,23 +593,272 @@ make test-coverage
 
 ```
 .
-├── app/                    # Application code
+├── app/                            # Application PHP code
 │   ├── Http/
-│   │   ├── Controllers/   # Controllers
-│   │   └── Middleware/    # Middleware
-│   └── Models/            # Eloquent models
+│   │   ├── Controllers/            # Request handlers (DashboardController, PageController, etc.)
+│   │   └── Middleware/             # HTTP middleware
+│   ├── Models/                     # Eloquent models (User, etc.)
+│   └── Providers/                  # Service providers (AppServiceProvider)
+├── bootstrap/
+│   └── app.php                     # Laravel 11 central config (middleware, routing, exceptions)
+├── config/                         # Application configuration files
+├── database/
+│   ├── factories/                  # Model factories for testing
+│   ├── migrations/                 # Database schema migrations
+│   └── seeders/                    # Database seeders
+├── docker/                         # Docker service configuration
+│   ├── mysql/my.cnf                # MySQL configuration
+│   ├── nginx/conf.d/default.conf   # Nginx virtual host
+│   └── php/local.ini               # PHP runtime settings
+├── public/                         # Web server document root
+│   └── build/                      # Compiled assets (generated by Vite)
 ├── resources/
-│   ├── views/             # Blade templates
-│   ├── js/                # JavaScript files
-│   └── scss/              # SCSS files
+│   ├── css/                        # Stylesheets
+│   │   ├── app.css                 # Custom application styles (your overrides go here)
+│   │   ├── core.css                # Vuexy core styles
+│   │   ├── theme-default.css       # Vuexy default theme
+│   │   └── vendors/                # Third-party CSS (copied from template)
+│   ├── images/                     # Static images
+│   │   ├── avatars/                # User avatar images
+│   │   ├── illustrations/          # Page illustration images
+│   │   └── favicon/                # Favicon files
+│   ├── js/                         # JavaScript source files
+│   │   ├── app.js                  # Main JS entry point (your custom scripts go here)
+│   │   ├── bootstrap.js            # Axios / Echo setup
+│   │   ├── config.js               # Template configuration (theme, layout options)
+│   │   ├── main.js                 # Vuexy initialisation
+│   │   ├── template.js             # Template JS entry point
+│   │   └── vendors/                # Third-party JS (copied from template)
+│   ├── vendor/                     # Vendor fonts and SCSS source (from Vuexy)
+│   └── views/                      # Blade templates
+│       ├── layouts/
+│       │   └── app.blade.php       # Master layout (HTML shell, @vite directives)
+│       ├── components/             # Reusable Blade components
+│       │   ├── sidebar.blade.php   # Navigation sidebar
+│       │   ├── navbar.blade.php    # Top navigation bar
+│       │   └── footer.blade.php    # Page footer
+│       ├── pages/                  # Additional page views
+│       │   ├── account-settings.blade.php
+│       │   └── profile.blade.php
+│       ├── errors/
+│       │   └── 404.blade.php       # Custom 404 error page
+│       └── dashboard.blade.php     # Dashboard page view
+├── routes/
+│   ├── web.php                     # Web routes (browser-facing)
+│   ├── api.php                     # API routes
+│   └── console.php                 # Scheduled commands (replaces Console Kernel in L11)
 ├── tests/
-│   ├── Feature/           # Feature tests
-│   └── Property/          # Property-based tests
-├── docker/                # Docker configuration
-├── Makefile              # Make commands
-├── docker-compose.yml    # Docker services
-└── vite.config.js        # Vite configuration
+│   ├── Feature/                    # HTTP / integration tests
+│   ├── Property/                   # Property-based tests (Eris)
+│   └── Unit/                       # Unit tests
+├── docker-compose.yml              # Docker services definition
+├── Dockerfile                      # PHP-FPM application image
+├── Makefile                        # Developer shortcuts (make up, make test, etc.)
+├── vite.config.js                  # Vite build configuration and aliases
+└── .env.example                    # Environment variable template
 ```
+
+### Key Directories Explained
+
+| Directory | Purpose |
+|-----------|---------|
+| `app/Http/Controllers/` | One controller per feature area. Each public method maps to a route and returns a view or JSON response. |
+| `app/Models/` | Eloquent models. Each model represents a database table and defines relationships, casts, and fillable fields. |
+| `resources/views/layouts/` | Master layout files. All page views extend `app.blade.php` via `@extends('layouts.app')`. |
+| `resources/views/components/` | Blade components included automatically by the layout (sidebar, navbar, footer). |
+| `resources/views/pages/` | One view per page that is not the dashboard. Mirrors the route group structure in `routes/web.php`. |
+| `resources/css/` | CSS entry points processed by Vite. `app.css` is the right place for project-specific overrides. |
+| `resources/js/` | JS entry points processed by Vite. `app.js` is the right place for project-specific scripts. |
+| `resources/images/` | Static images referenced in Blade templates via the `@img` alias or `asset()` helper. |
+| `routes/web.php` | All browser-facing routes. Grouped by feature prefix (e.g., `pages/`). |
+| `tests/Property/` | Eris property-based tests that verify universal correctness properties across many inputs. |
+| `docker/` | Per-service configuration files mounted into Docker containers at runtime. |
+
+### Where to Add New Code
+
+**New Blade component** — create `resources/views/components/<name>.blade.php` and include it with `<x-name />` or `@include('components.name')`.
+
+**New page view** — create `resources/views/pages/<name>.blade.php` extending the master layout:
+
+```blade
+@extends('layouts.app')
+
+@section('title', 'Page Title')
+
+@section('content')
+    {{-- your content here --}}
+@endsection
+```
+
+**New controller** — run `php artisan make:controller <Name>Controller` (or `make artisan CMD="make:controller <Name>Controller"` with Docker). Place it in `app/Http/Controllers/`.
+
+**New route** — add it to `routes/web.php`. Group related routes under a common prefix:
+
+```php
+Route::prefix('blog')->name('blog.')->group(function () {
+    Route::get('/', [BlogController::class, 'index'])->name('index');
+    Route::get('/{post}', [BlogController::class, 'show'])->name('show');
+});
+```
+
+**New model + migration** — run `php artisan make:model <Name> -m`. The model goes to `app/Models/` and the migration to `database/migrations/`.
+
+**New CSS styles** — add them to `resources/css/app.css`. For larger feature-specific stylesheets, create a new file under `resources/css/` and import it from `app.css`.
+
+**New JavaScript** — add scripts to `resources/js/app.js`. For larger modules, create a new file under `resources/js/` and import it from `app.js`.
+
+## 📄 Creating New Pages
+
+This section walks through a complete example of adding a new "Blog" page to the application — from route to controller to view.
+
+### Step 1 — Add the route
+
+Open `routes/web.php` and add a route group for your new section:
+
+```php
+use App\Http\Controllers\BlogController;
+
+Route::prefix('blog')->name('blog.')->group(function () {
+    Route::get('/', [BlogController::class, 'index'])->name('index');
+    Route::get('/{id}', [BlogController::class, 'show'])->name('show');
+});
+```
+
+This creates two named routes: `blog.index` (`/blog`) and `blog.show` (`/blog/{id}`).
+
+### Step 2 — Create the controller
+
+Generate the controller with Artisan:
+
+```bash
+# With Docker
+make artisan CMD="make:controller BlogController"
+
+# Without Docker
+php artisan make:controller BlogController
+```
+
+Then open `app/Http/Controllers/BlogController.php` and implement the methods:
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\View\View;
+
+class BlogController extends Controller
+{
+    public function index(): View
+    {
+        $posts = [
+            ['id' => 1, 'title' => 'First Post', 'excerpt' => 'Introduction to our blog.'],
+            ['id' => 2, 'title' => 'Second Post', 'excerpt' => 'More content here.'],
+        ];
+
+        return view('pages.blog.index', compact('posts'));
+    }
+
+    public function show(int $id): View
+    {
+        // Replace with a real database query when ready
+        $post = ['id' => $id, 'title' => "Post #{$id}", 'body' => 'Full post content goes here.'];
+
+        return view('pages.blog.show', compact('post'));
+    }
+}
+```
+
+### Step 3 — Create the views
+
+Create the directory and view files:
+
+```bash
+mkdir -p resources/views/pages/blog
+```
+
+**`resources/views/pages/blog/index.blade.php`**
+
+```blade
+@extends('layouts.app')
+
+@section('title', 'Blog')
+
+@section('content')
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">Blog</h4>
+
+    <div class="row">
+        @foreach ($posts as $post)
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $post['title'] }}</h5>
+                    <p class="card-text">{{ $post['excerpt'] }}</p>
+                    <a href="{{ route('blog.show', $post['id']) }}" class="btn btn-primary">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</div>
+@endsection
+```
+
+**`resources/views/pages/blog/show.blade.php`**
+
+```blade
+@extends('layouts.app')
+
+@section('title', $post['title'])
+
+@section('content')
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">
+        <a href="{{ route('blog.index') }}" class="text-muted fw-light">Blog /</a>
+        {{ $post['title'] }}
+    </h4>
+
+    <div class="card">
+        <div class="card-body">
+            <p>{{ $post['body'] }}</p>
+            <a href="{{ route('blog.index') }}" class="btn btn-outline-secondary">
+                &larr; Back to Blog
+            </a>
+        </div>
+    </div>
+</div>
+@endsection
+```
+
+### Step 4 — Add a sidebar link (optional)
+
+Open `resources/views/components/sidebar.blade.php` and add a menu item inside the navigation list:
+
+```blade
+<li class="menu-item {{ request()->routeIs('blog.*') ? 'active' : '' }}">
+    <a href="{{ route('blog.index') }}" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-news"></i>
+        <div>Blog</div>
+    </a>
+</li>
+```
+
+### Step 5 — Verify
+
+Visit http://localhost:8000/blog in your browser. The page should render using the full Vuexy layout with sidebar, navbar, and footer.
+
+To confirm the routes are registered:
+
+```bash
+make artisan CMD="route:list --path=blog"
+# or without Docker:
+php artisan route:list --path=blog
+```
+
+---
 
 ## 🔧 Troubleshooting
 

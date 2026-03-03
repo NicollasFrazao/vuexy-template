@@ -25,7 +25,7 @@ class UserModelTest extends TestCase
             'role',
         ];
 
-        $user = new User();
+        $user = new User;
         $fillable = $user->getFillable();
 
         $this->assertEquals($expectedFillable, $fillable);
@@ -62,17 +62,17 @@ class UserModelTest extends TestCase
     public function password_is_hashed_via_casting()
     {
         $plainPassword = 'my-secret-password';
-        
+
         $user = User::factory()->create([
             'password' => $plainPassword,
         ]);
 
         // Password should not be stored as plain text
         $this->assertNotEquals($plainPassword, $user->password);
-        
+
         // Password should be hashed (bcrypt produces 60 character strings)
         $this->assertGreaterThanOrEqual(60, strlen($user->password));
-        
+
         // Verify the password hash is valid
         $this->assertTrue(\Hash::check($plainPassword, $user->password));
     }
@@ -122,7 +122,7 @@ class UserModelTest extends TestCase
      */
     public function hidden_array_contains_required_fields()
     {
-        $user = new User();
+        $user = new User;
         $hidden = $user->getHidden();
 
         $this->assertContains('password', $hidden);

@@ -17,7 +17,7 @@ class AssetImportTest extends TestCase
         $npmCheck = [];
         $npmCheckReturn = 0;
         exec('which npm 2>&1', $npmCheck, $npmCheckReturn);
-        
+
         if ($npmCheckReturn !== 0) {
             $this->markTestSkipped('npm is not available in this environment (expected in Docker PHP container)');
         }

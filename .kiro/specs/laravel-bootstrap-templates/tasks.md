@@ -194,7 +194,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Testar que componentes visuais estão presentes
   - _Requisitos: 6.5_
 
-- [~] 9. Configurar banco de dados e models
+- [x] 9. Configurar banco de dados e models
   - [x] 9.1 Atualizar arquivo .env.example com configurações de banco
     - Adicionar variáveis DB_CONNECTION, DB_HOST, DB_PORT
     - Adicionar DB_DATABASE, DB_USERNAME, DB_PASSWORD
@@ -218,87 +218,87 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Testar casting de password
     - _Requisitos: 8.3_
 
-- [ ] 9.5 Atualizar para Laravel 11.x e versões mais recentes
+- [x] 9.5 Atualizar para Laravel 11.x e versões mais recentes
   - [x] 9.5.1 Atualizar dependências do Composer
     - Atualizar composer.json para Laravel 11.x
     - Executar `composer update` para atualizar todas as dependências
     - Resolver conflitos de dependências se houver
     - _Requisitos: 1.3, 2.1_
 
-  - [-] 9.5.2 Atualizar configurações do Laravel 11
+  - [x] 9.5.2 Atualizar configurações do Laravel 11
     - Revisar e atualizar arquivos de configuração para Laravel 11
     - Verificar mudanças em config/app.php, config/database.php
     - Atualizar service providers se necessário
     - Verificar compatibilidade de middleware
     - _Requisitos: 2.2, 8.1_
 
-  - [~] 9.5.3 Reconstruir containers Docker com novas versões
+  - [x] 9.5.3 Reconstruir containers Docker com novas versões
     - Executar `make clean` para remover containers antigos
     - Executar `make build` para reconstruir com PHP 8.2, MySQL 9.1, Node 22
     - Verificar que todos os containers iniciam sem erros
     - Testar conectividade entre serviços
     - _Requisitos: 12.1_
 
-  - [~] 9.5.4 Executar testes após atualização
+  - [x] 9.5.4 Executar testes após atualização
     - Executar suite completa de testes
     - Corrigir testes quebrados devido a mudanças no Laravel 11
     - Verificar que migrations funcionam com MySQL 9.1
     - Validar que assets compilam com Node 22
     - _Requisitos: 5.5, 12.2_
 
-  - [~] 9.5.5 Atualizar documentação com novas versões
+  - [x] 9.5.5 Atualizar documentação com novas versões
     - Atualizar README.md com requisitos de versão atualizados
     - Documentar mudanças específicas do Laravel 11
     - Adicionar notas sobre compatibilidade
     - Atualizar comandos de instalação se necessário
     - _Requisitos: 9.1, 12.5_
 
-- [~] 10. Implementar tratamento de erros e páginas de erro customizadas
-  - [~] 10.1 Criar view de erro 404
+- [x] 10. Implementar tratamento de erros e páginas de erro customizadas
+  - [x] 10.1 Criar view de erro 404
     - Criar resources/views/errors/404.blade.php
     - Estender layout principal
     - Implementar design de página não encontrada usando template Vuexy
     - _Requisitos: 11.5_
 
-  - [~] 10.2 Configurar logging apropriado
+  - [x] 10.2 Configurar logging apropriado
     - Verificar configuração em config/logging.php
     - Garantir que canal 'daily' está configurado
     - Definir retenção de logs para 14 dias
     - _Requisitos: 12.3_
 
-  - [~] 10.3 Escrever testes para páginas de erro
+  - [x] 10.3 Escrever testes para páginas de erro
     - Testar que rota inexistente retorna 404
     - Testar que página 404 usa layout do template
     - _Requisitos: 11.5_
 
-- [~] 11. Validar compatibilidade e responsividade de assets
-  - [~] 11.1 Escrever teste de propriedade para existência de assets
+- [x] 11. Validar compatibilidade e responsividade de assets
+  - [x] 11.1 Escrever teste de propriedade para existência de assets
     - **Property 3: Assets Referenciados Existem**
     - **Valida: Requisitos 3.2, 11.1, 11.2, 11.3, 11.4**
     - Criar teste que extrai referências de assets do HTML renderizado
     - Validar que cada asset referenciado existe no sistema de arquivos
 
-  - [~] 11.2 Criar testes de integração para assets
+  - [x] 11.2 Criar testes de integração para assets
     - Testar que CSS é carregado sem erros 404
     - Testar que JavaScript é carregado sem erros 404
     - Testar que imagens principais são carregadas
     - _Requisitos: 11.1, 11.2, 11.3_
 
-- [~] 12. Checkpoint - Verificar funcionalidade completa do starter-kit
+- [x] 12. Checkpoint - Verificar funcionalidade completa do starter-kit
   - Executar `php artisan migrate` e verificar que migrations funcionam
   - Executar `npm run build` e verificar build sem erros
   - Iniciar servidor e navegar por todas as rotas criadas
   - Verificar responsividade em diferentes resoluções (inspecionar manualmente)
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
-- [~] 13. Criar documentação README.md
-  - [~] 13.1 Escrever seção de requisitos do sistema
+- [x] 13. Criar documentação README.md
+  - [x] 13.1 Escrever seção de requisitos do sistema
     - Listar versões necessárias: PHP 8.2+, Composer 2.x, Node 22.x, NPM 10.x
     - Listar extensões PHP necessárias (PDO, Mbstring, OpenSSL, etc)
     - Especificar MySQL 9.1 ou compatível
     - _Requisitos: 9.1, 12.5_
 
-  - [~] 13.2 Escrever instruções de instalação
+  - [x] 13.2 Escrever instruções de instalação
     - Documentar passo a passo: clone, composer install, npm install
     - Documentar configuração do .env
     - Documentar geração de APP_KEY
@@ -306,56 +306,56 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Documentar execução de migrations
     - _Requisitos: 9.2, 12.4_
 
-  - [~] 13.3 Escrever instruções de desenvolvimento
+  - [x] 13.3 Escrever instruções de desenvolvimento
     - Documentar comando para servidor de desenvolvimento
     - Documentar comando para compilar assets (dev e build)
     - Documentar comando para executar testes
     - _Requisitos: 9.3, 9.4_
 
-  - [~] 13.4 Documentar estrutura do projeto
+  - [x] 13.4 Documentar estrutura do projeto
     - Criar diagrama ou lista da estrutura de diretórios
     - Explicar propósito de cada diretório principal
     - Documentar onde adicionar novos componentes
     - _Requisitos: 9.5_
 
-  - [~] 13.5 Documentar como criar novas páginas
+  - [x] 13.5 Documentar como criar novas páginas
     - Fornecer exemplo de criação de nova rota
     - Fornecer exemplo de criação de novo controller
     - Fornecer exemplo de criação de nova view usando layout
     - _Requisitos: 9.6_
 
-- [~] 14. Validar conformidade com PSR-12 e boas práticas
-  - [~] 14.1 Escrever teste de propriedade para namespaces PSR-4
+- [x] 14. Validar conformidade com PSR-12 e boas práticas
+  - [x] 14.1 Escrever teste de propriedade para namespaces PSR-4
     - **Property 7: Namespaces Seguem PSR-4**
     - **Valida: Requisito 10.2**
     - Criar teste que verifica correspondência entre namespaces e estrutura de diretórios
     - Validar todas as classes PHP no projeto
 
-  - [~] 14.2 Executar análise estática de código
+  - [x] 14.2 Executar análise estática de código
     - Instalar PHP_CodeSniffer ou Laravel Pint
     - Executar análise e corrigir problemas de estilo
     - _Requisitos: 10.6_
 
-  - [~] 14.3 Adicionar comentários em código complexo
+  - [x] 14.3 Adicionar comentários em código complexo
     - Revisar todos os arquivos criados
     - Adicionar docblocks em métodos públicos
     - Adicionar comentários inline onde lógica não é óbvia
     - _Requisitos: 10.5_
 
-- [~] 15. Checkpoint final - Validação completa do starter-kit
+- [x] 15. Checkpoint final - Validação completa do starter-kit
   - Executar suite completa de testes (unitários e de propriedades)
   - Executar build de produção e verificar otimização de assets
   - Revisar documentação para garantir clareza e completude
   - Testar instalação do zero seguindo o README
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
-- [~] 16. Criar branch full-version e adicionar conteúdo adicional
-  - [~] 16.1 Criar nova branch a partir do starter-kit
+- [ ] 16. Criar branch full-version e adicionar conteúdo adicional
+  - [x] 16.1 Criar nova branch a partir do starter-kit
     - Criar branch "template/laravel/bootstrap/full" a partir da branch starter
     - Verificar que todo o conteúdo do starter está presente
     - _Requisitos: 1.2, 1.4_
 
-  - [~] 16.2 Integrar assets adicionais do template full-version
+  - [-] 16.2 Integrar assets adicionais do template full-version
     - Copiar assets CSS adicionais da pasta full-version para resources/css/
     - Copiar assets JavaScript adicionais para resources/js/
     - Copiar imagens e recursos adicionais para resources/images/
@@ -394,7 +394,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Executar suite de testes
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
-- [~] 18. Atualizar documentação para full-version
+- [ ] 18. Atualizar documentação para full-version
   - [~] 18.1 Atualizar README.md com informações específicas
     - Documentar diferenças entre starter e full-version
     - Listar todas as páginas disponíveis na full-version
@@ -407,7 +407,7 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Documentar props e slots aceitos
     - _Requisitos: 9.6_
 
-- [~] 19. Validação final e testes de aceitação
+- [ ] 19. Validação final e testes de aceitação
   - [~] 19.1 Executar suite completa de testes em ambas as branches
     - Checkout na branch starter e executar todos os testes
     - Checkout na branch full e executar todos os testes

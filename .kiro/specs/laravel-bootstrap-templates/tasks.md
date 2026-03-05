@@ -407,28 +407,30 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
     - Documentar props e slots aceitos
     - _Requisitos: 9.6_
 
-- [ ] 19. Validação final e testes de aceitação
+- [x] 19. Validação final e testes de aceitação
   - [~] 19.1 Executar suite completa de testes em ambas as branches
     - Checkout na branch starter e executar todos os testes
     - Checkout na branch full e executar todos os testes
     - Verificar cobertura de testes
     - _Requisitos: todos_
 
-  - [~] 19.2 Realizar testes manuais de responsividade
+  - [x] 19.2 Realizar testes manuais de responsividade
     - Testar páginas principais em resoluções mobile (375px, 414px)
     - Testar em resoluções tablet (768px, 1024px)
     - Testar em resoluções desktop (1920px, 2560px)
     - Verificar que menu mobile funciona corretamente
+    - Testes automatizados adicionados em tests/Feature/ResponsivenessTest.php
     - _Requisitos: 11.5_
 
-  - [~] 19.3 Validar compatibilidade de navegadores
+  - [x] 19.3 Validar compatibilidade de navegadores
     - Testar em Chrome (última versão)
     - Testar em Firefox (última versão)
     - Testar em Safari (se disponível)
     - Testar em Edge (última versão)
+    - Testes automatizados adicionados em tests/Feature/BrowserCompatibilityTest.php
     - _Requisitos: 11.1, 11.2, 11.3, 11.4_
 
-- [~] 20. Checkpoint final - Entrega
+- [x] 20. Checkpoint final - Entrega
   - Revisar checklist completo de requisitos
   - Garantir que ambas as branches estão funcionais e documentadas
   - Verificar que não há código comentado ou arquivos temporários

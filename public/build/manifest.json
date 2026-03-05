@@ -1,4 +1,335 @@
 {
+  "Rollup HTML Asset": {
+    "file": "index.html",
+    "src": "Rollup HTML Asset"
+  },
+  "__commonjs-dynamic-modules-TDtrdbi3.js": {
+    "file": "assets/_commonjs-dynamic-modules-TDtrdbi3.js",
+    "name": "_commonjs-dynamic-modules"
+  },
+  "__commonjsHelpers-BosuxZz1.js": {
+    "file": "assets/_commonjsHelpers-BosuxZz1.js",
+    "name": "_commonjsHelpers"
+  },
+  "_index-D_6hAncj.js": {
+    "file": "assets/index-D_6hAncj.js",
+    "name": "index"
+  },
+  "_jquery-CED9k22g.js": {
+    "file": "assets/jquery-CED9k22g.js",
+    "name": "jquery",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-Czc5UB_B.js"
+    ]
+  },
+  "_jquery-Czc5UB_B.js": {
+    "file": "assets/jquery-Czc5UB_B.js",
+    "name": "jquery",
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "node_modules/jstree/dist/themes/default-dark/32px.png": {
+    "file": "assets/32px-By6ysAjd.png",
+    "src": "node_modules/jstree/dist/themes/default-dark/32px.png"
+  },
+  "node_modules/jstree/dist/themes/default-dark/40px.png": {
+    "file": "assets/40px-BO2jNGqH.png",
+    "src": "node_modules/jstree/dist/themes/default-dark/40px.png"
+  },
+  "node_modules/jstree/dist/themes/default-dark/throbber.gif": {
+    "file": "assets/throbber-DudwG3MS.gif",
+    "src": "node_modules/jstree/dist/themes/default-dark/throbber.gif"
+  },
+  "node_modules/jstree/dist/themes/default/32px.png": {
+    "file": "assets/32px-CHwblES-.png",
+    "src": "node_modules/jstree/dist/themes/default/32px.png"
+  },
+  "node_modules/jstree/dist/themes/default/40px.png": {
+    "file": "assets/40px-fA5gcXpO.png",
+    "src": "node_modules/jstree/dist/themes/default/40px.png"
+  },
+  "node_modules/jstree/dist/themes/default/throbber.gif": {
+    "file": "assets/throbber-DhAvNIJO.gif",
+    "src": "node_modules/jstree/dist/themes/default/throbber.gif"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.ttf": {
+    "file": "assets/KaTeX_AMS-Regular-DRggAlZN.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff": {
+    "file": "assets/KaTeX_AMS-Regular-DMm9YOAa.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff2": {
+    "file": "assets/KaTeX_AMS-Regular-BQhdFMY1.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf": {
+    "file": "assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff": {
+    "file": "assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2": {
+    "file": "assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.ttf": {
+    "file": "assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff": {
+    "file": "assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff2": {
+    "file": "assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.ttf": {
+    "file": "assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff": {
+    "file": "assets/KaTeX_Fraktur-Bold-BsDP51OF.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff2": {
+    "file": "assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf": {
+    "file": "assets/KaTeX_Fraktur-Regular-CB_wures.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff": {
+    "file": "assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff2": {
+    "file": "assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Bold.ttf": {
+    "file": "assets/KaTeX_Main-Bold-waoOVXN0.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff": {
+    "file": "assets/KaTeX_Main-Bold-Jm3AIy58.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff2": {
+    "file": "assets/KaTeX_Main-Bold-Cx986IdX.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.ttf": {
+    "file": "assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff": {
+    "file": "assets/KaTeX_Main-BoldItalic-SpSLRI95.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff2": {
+    "file": "assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Italic.ttf": {
+    "file": "assets/KaTeX_Main-Italic-3WenGoN9.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Italic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff": {
+    "file": "assets/KaTeX_Main-Italic-BMLOBm91.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff2": {
+    "file": "assets/KaTeX_Main-Italic-NWA7e6Wa.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Regular.ttf": {
+    "file": "assets/KaTeX_Main-Regular-ypZvNtVU.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff": {
+    "file": "assets/KaTeX_Main-Regular-Dr94JaBh.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff2": {
+    "file": "assets/KaTeX_Main-Regular-B22Nviop.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.ttf": {
+    "file": "assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff": {
+    "file": "assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff2": {
+    "file": "assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-Italic.ttf": {
+    "file": "assets/KaTeX_Math-Italic-flOr_0UB.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-Italic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff": {
+    "file": "assets/KaTeX_Math-Italic-DA0__PXp.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff2": {
+    "file": "assets/KaTeX_Math-Italic-t53AETM-.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.ttf": {
+    "file": "assets/KaTeX_SansSerif-Bold-CFMepnvq.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff": {
+    "file": "assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff2": {
+    "file": "assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.ttf": {
+    "file": "assets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff": {
+    "file": "assets/KaTeX_SansSerif-Italic-DN2j7dab.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff2": {
+    "file": "assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.ttf": {
+    "file": "assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff": {
+    "file": "assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff2": {
+    "file": "assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Script-Regular.ttf": {
+    "file": "assets/KaTeX_Script-Regular-C5JkGWo-.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Script-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff": {
+    "file": "assets/KaTeX_Script-Regular-D5yQViql.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff2": {
+    "file": "assets/KaTeX_Script-Regular-D3wIWfF6.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.ttf": {
+    "file": "assets/KaTeX_Size1-Regular-Dbsnue_I.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff": {
+    "file": "assets/KaTeX_Size1-Regular-C195tn64.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff2": {
+    "file": "assets/KaTeX_Size1-Regular-mCD8mA8B.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.ttf": {
+    "file": "assets/KaTeX_Size2-Regular-B7gKUWhC.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff": {
+    "file": "assets/KaTeX_Size2-Regular-oD1tc_U0.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff2": {
+    "file": "assets/KaTeX_Size2-Regular-Dy4dx90m.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.ttf": {
+    "file": "assets/KaTeX_Size3-Regular-DgpXs0kz.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.woff": {
+    "file": "assets/KaTeX_Size3-Regular-CTq5MqoE.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.woff2": {
+    "file": "assets/KaTeX_Size3-Regular-gV2CO0n9.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.ttf": {
+    "file": "assets/KaTeX_Size4-Regular-DWFBv043.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff": {
+    "file": "assets/KaTeX_Size4-Regular-BF-4gkZK.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff2": {
+    "file": "assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf": {
+    "file": "assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff": {
+    "file": "assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff2": {
+    "file": "assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff2"
+  },
+  "node_modules/leaflet/dist/images/layers-2x.png": {
+    "file": "assets/layers-2x-Bpkbi35X.png",
+    "src": "node_modules/leaflet/dist/images/layers-2x.png"
+  },
+  "node_modules/leaflet/dist/images/layers.png": {
+    "file": "assets/layers-BWBAp2CZ.png",
+    "src": "node_modules/leaflet/dist/images/layers.png"
+  },
+  "node_modules/leaflet/dist/images/marker-icon-2x.png": {
+    "file": "assets/marker-icon-2x-_ZA0WGCc.png",
+    "src": "node_modules/leaflet/dist/images/marker-icon-2x.png"
+  },
+  "node_modules/leaflet/dist/images/marker-icon.png": {
+    "file": "assets/marker-icon-hN30_KVU.png",
+    "src": "node_modules/leaflet/dist/images/marker-icon.png"
+  },
+  "node_modules/leaflet/dist/images/marker-shadow.png": {
+    "file": "assets/marker-shadow-f7SaPCxT.png",
+    "src": "node_modules/leaflet/dist/images/marker-shadow.png"
+  },
+  "node_modules/raty-js/src/fonts/raty.eot": {
+    "file": "assets/raty-CCWyqYLe.eot",
+    "src": "node_modules/raty-js/src/fonts/raty.eot"
+  },
+  "node_modules/raty-js/src/fonts/raty.svg": {
+    "file": "assets/raty-BDlX3SC_.svg",
+    "src": "node_modules/raty-js/src/fonts/raty.svg"
+  },
+  "node_modules/raty-js/src/fonts/raty.ttf": {
+    "file": "assets/raty-BEoJUe7k.ttf",
+    "src": "node_modules/raty-js/src/fonts/raty.ttf"
+  },
+  "node_modules/raty-js/src/fonts/raty.woff": {
+    "file": "assets/raty-BWWjJmYD.woff",
+    "src": "node_modules/raty-js/src/fonts/raty.woff"
+  },
   "resources/css/app.css": {
     "file": "assets/app-tn0RQdqM.css",
     "src": "resources/css/app.css",
@@ -160,15 +491,847 @@
     "src": "resources/images/illustrations/page-misc-you-are-not-authorized.png"
   },
   "resources/js/app.js": {
-    "file": "assets/app-AJHVr39y.js",
+    "file": "assets/app-DwLtKybn.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
   },
   "resources/js/template.js": {
     "file": "assets/template-CpHXfBhn.js",
     "name": "template",
     "src": "resources/js/template.js",
+    "isEntry": true
+  },
+  "resources/vendor/fonts/flag-icons.scss": {
+    "file": "assets/flag-icons-Cq04d-3j.css",
+    "src": "resources/vendor/fonts/flag-icons.scss",
+    "isEntry": true
+  },
+  "resources/vendor/fonts/fontawesome.scss": {
+    "file": "assets/fontawesome-CxCRvM8Y.css",
+    "src": "resources/vendor/fonts/fontawesome.scss",
+    "isEntry": true
+  },
+  "resources/vendor/fonts/iconify/iconify.css": {
+    "file": "assets/iconify-CUuAgEs4.css",
+    "src": "resources/vendor/fonts/iconify/iconify.css",
+    "isEntry": true
+  },
+  "resources/vendor/js/bootstrap.js": {
+    "file": "assets/bootstrap-X1aU7VJP.js",
+    "name": "bootstrap",
+    "src": "resources/vendor/js/bootstrap.js",
+    "isEntry": true
+  },
+  "resources/vendor/js/dropdown-hover.js": {
+    "file": "assets/dropdown-hover-D5gy_vov.js",
+    "name": "dropdown-hover",
+    "src": "resources/vendor/js/dropdown-hover.js",
+    "isEntry": true
+  },
+  "resources/vendor/js/helpers.js": {
+    "file": "assets/helpers-DAoeyj3E.js",
+    "name": "helpers",
+    "src": "resources/vendor/js/helpers.js",
+    "isEntry": true
+  },
+  "resources/vendor/js/mega-dropdown.js": {
+    "file": "assets/mega-dropdown-DsEs-otz.js",
+    "name": "mega-dropdown",
+    "src": "resources/vendor/js/mega-dropdown.js",
+    "isEntry": true
+  },
+  "resources/vendor/js/menu.js": {
+    "file": "assets/menu-Cc3Gq5JA.js",
+    "name": "menu",
+    "src": "resources/vendor/js/menu.js",
+    "isEntry": true
+  },
+  "resources/vendor/js/template-customizer.js": {
+    "file": "assets/template-customizer-DBKgDaSZ.js",
+    "name": "template-customizer",
+    "src": "resources/vendor/js/template-customizer.js",
+    "isEntry": true,
+    "css": [
+      "assets/template-customizer-CvTzP1B2.css"
+    ]
+  },
+  "resources/vendor/libs/@algolia/autocomplete-js.js": {
+    "file": "assets/autocomplete-js-DuDOXWR_.js",
+    "name": "autocomplete-js",
+    "src": "resources/vendor/libs/@algolia/autocomplete-js.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/@form-validation/auto-focus.js": {
+    "file": "assets/auto-focus-DQFs5rhr.js",
+    "name": "auto-focus",
+    "src": "resources/vendor/libs/@form-validation/auto-focus.js",
+    "isEntry": true,
+    "imports": [
+      "_index-D_6hAncj.js"
+    ]
+  },
+  "resources/vendor/libs/@form-validation/bootstrap5.js": {
+    "file": "assets/bootstrap5-GPxv84Av.js",
+    "name": "bootstrap5",
+    "src": "resources/vendor/libs/@form-validation/bootstrap5.js",
+    "isEntry": true,
+    "imports": [
+      "_index-D_6hAncj.js"
+    ]
+  },
+  "resources/vendor/libs/@form-validation/form-validation.scss": {
+    "file": "assets/form-validation-Bg--itJV.css",
+    "src": "resources/vendor/libs/@form-validation/form-validation.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/@form-validation/popular.js": {
+    "file": "assets/popular-DxzY11pE.js",
+    "name": "popular",
+    "src": "resources/vendor/libs/@form-validation/popular.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/animate-css/animate.scss": {
+    "file": "assets/animate-BP00llhF.css",
+    "src": "resources/vendor/libs/animate-css/animate.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/animate-on-scroll/animate-on-scroll.js": {
+    "file": "assets/animate-on-scroll-kSEW1YFn.js",
+    "name": "animate-on-scroll",
+    "src": "resources/vendor/libs/animate-on-scroll/animate-on-scroll.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/animate-on-scroll/animate-on-scroll.scss": {
+    "file": "assets/animate-on-scroll-DvB2Xm2x.css",
+    "src": "resources/vendor/libs/animate-on-scroll/animate-on-scroll.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/apex-charts/apex-charts.scss": {
+    "file": "assets/apex-charts-BxPEk_69.css",
+    "src": "resources/vendor/libs/apex-charts/apex-charts.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/apex-charts/apexcharts.js": {
+    "file": "assets/apexcharts-BDifGQce.js",
+    "name": "apexcharts",
+    "src": "resources/vendor/libs/apex-charts/apexcharts.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/bloodhound/bloodhound.js": {
+    "file": "assets/bloodhound-D9s5MzZf.js",
+    "name": "bloodhound",
+    "src": "resources/vendor/libs/bloodhound/bloodhound.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-Czc5UB_B.js"
+    ]
+  },
+  "resources/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.js": {
+    "file": "assets/bootstrap-daterangepicker-DFRRB1A9.js",
+    "name": "bootstrap-daterangepicker",
+    "src": "resources/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-Czc5UB_B.js"
+    ]
+  },
+  "resources/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.scss": {
+    "file": "assets/bootstrap-daterangepicker-BIEE9CIz.css",
+    "src": "resources/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/bootstrap-select/bootstrap-select.js": {
+    "file": "assets/bootstrap-select-DC4KoNLs.js",
+    "name": "bootstrap-select",
+    "src": "resources/vendor/libs/bootstrap-select/bootstrap-select.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/bootstrap-select/bootstrap-select.scss": {
+    "file": "assets/bootstrap-select-DE4gJy_C.css",
+    "src": "resources/vendor/libs/bootstrap-select/bootstrap-select.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/bs-stepper/bs-stepper.js": {
+    "file": "assets/bs-stepper-Dvr80vBu.js",
+    "name": "bs-stepper",
+    "src": "resources/vendor/libs/bs-stepper/bs-stepper.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/bs-stepper/bs-stepper.scss": {
+    "file": "assets/bs-stepper-Co1ZF0lQ.css",
+    "src": "resources/vendor/libs/bs-stepper/bs-stepper.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/chartjs/chartjs.js": {
+    "file": "assets/chartjs-C7CuBA81.js",
+    "name": "chartjs",
+    "src": "resources/vendor/libs/chartjs/chartjs.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/chartjs/chartjs.scss": {
+    "file": "assets/chartjs-CqJD5Max.css",
+    "src": "resources/vendor/libs/chartjs/chartjs.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/cleave-zen/cleave-zen.js": {
+    "file": "assets/cleave-zen-CtHmoKfQ.js",
+    "name": "cleave-zen",
+    "src": "resources/vendor/libs/cleave-zen/cleave-zen.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/clipboard/clipboard.js": {
+    "file": "assets/clipboard-CKc4qvEc.js",
+    "name": "clipboard",
+    "src": "resources/vendor/libs/clipboard/clipboard.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/datatables-bs5/datatables-bootstrap5.js": {
+    "file": "assets/datatables-bootstrap5-CT9PYfxk.js",
+    "name": "datatables-bootstrap5",
+    "src": "resources/vendor/libs/datatables-bs5/datatables-bootstrap5.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "__commonjs-dynamic-modules-TDtrdbi3.js",
+      "_jquery-CED9k22g.js",
+      "_jquery-Czc5UB_B.js"
+    ]
+  },
+  "resources/vendor/libs/datatables-bs5/datatables.bootstrap5.scss": {
+    "file": "assets/datatables-BgGupdqQ.css",
+    "src": "resources/vendor/libs/datatables-bs5/datatables.bootstrap5.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.scss": {
+    "file": "assets/buttons-T4Fc5Afe.css",
+    "src": "resources/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/datatables-fixedcolumns-bs5/fixedcolumns.bootstrap5.scss": {
+    "file": "assets/fixedcolumns-Bj9csAPF.css",
+    "src": "resources/vendor/libs/datatables-fixedcolumns-bs5/fixedcolumns.bootstrap5.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/datatables-fixedheader-bs5/fixedheader.bootstrap5.scss": {
+    "file": "assets/fixedheader-Cj9uz0pa.css",
+    "src": "resources/vendor/libs/datatables-fixedheader-bs5/fixedheader.bootstrap5.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.scss": {
+    "file": "assets/responsive-UqrnKg4K.css",
+    "src": "resources/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.scss": {
+    "file": "assets/rowgroup-Cry_6yCg.css",
+    "src": "resources/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/datatables-select-bs5/select.bootstrap5.scss": {
+    "file": "assets/select-BaD5q2-o.css",
+    "src": "resources/vendor/libs/datatables-select-bs5/select.bootstrap5.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/dropzone/dropzone.js": {
+    "file": "assets/dropzone-CWn0pzXf.js",
+    "name": "dropzone",
+    "src": "resources/vendor/libs/dropzone/dropzone.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/dropzone/dropzone.scss": {
+    "file": "assets/dropzone-CPY46v9-.css",
+    "src": "resources/vendor/libs/dropzone/dropzone.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/flatpickr/flatpickr.js": {
+    "file": "assets/flatpickr-MiPABc7p.js",
+    "name": "flatpickr",
+    "src": "resources/vendor/libs/flatpickr/flatpickr.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/flatpickr/flatpickr.scss": {
+    "file": "assets/flatpickr-CW9u2-Hl.css",
+    "src": "resources/vendor/libs/flatpickr/flatpickr.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/fullcalendar/fullcalendar.js": {
+    "file": "assets/fullcalendar-DtUvUzNj.js",
+    "name": "fullcalendar",
+    "src": "resources/vendor/libs/fullcalendar/fullcalendar.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/fullcalendar/fullcalendar.scss": {
+    "file": "assets/fullcalendar-BT1Bwn9S.css",
+    "src": "resources/vendor/libs/fullcalendar/fullcalendar.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/hammer/hammer.js": {
+    "file": "assets/hammer-DbFOON0O.js",
+    "name": "hammer",
+    "src": "resources/vendor/libs/hammer/hammer.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/highlight/highlight-github.scss": {
+    "file": "assets/highlight-github-BfC0goYb.css",
+    "src": "resources/vendor/libs/highlight/highlight-github.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/highlight/highlight.js": {
+    "file": "assets/highlight-BzjUkqsD.js",
+    "name": "highlight",
+    "src": "resources/vendor/libs/highlight/highlight.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/highlight/highlight.scss": {
+    "file": "assets/highlight-DGVygr29.css",
+    "src": "resources/vendor/libs/highlight/highlight.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/jkanban/jkanban.js": {
+    "file": "assets/jkanban-BndmyGf9.js",
+    "name": "jkanban",
+    "src": "resources/vendor/libs/jkanban/jkanban.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "__commonjs-dynamic-modules-TDtrdbi3.js"
+    ]
+  },
+  "resources/vendor/libs/jkanban/jkanban.scss": {
+    "file": "assets/jkanban-BqaJzIyo.css",
+    "src": "resources/vendor/libs/jkanban/jkanban.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/jquery-idletimer/jquery-idletimer.js": {
+    "file": "assets/jquery-idletimer-CdnpWgsu.js",
+    "name": "jquery-idletimer",
+    "src": "resources/vendor/libs/jquery-idletimer/jquery-idletimer.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/jquery-repeater/jquery-repeater.js": {
+    "file": "assets/jquery-repeater-B6krBLuh.js",
+    "name": "jquery-repeater",
+    "src": "resources/vendor/libs/jquery-repeater/jquery-repeater.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/jquery-timepicker/jquery-timepicker.js": {
+    "file": "assets/jquery-timepicker-BIZlPFEF.js",
+    "name": "jquery-timepicker",
+    "src": "resources/vendor/libs/jquery-timepicker/jquery-timepicker.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-Czc5UB_B.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/jquery-timepicker/jquery-timepicker.scss": {
+    "file": "assets/jquery-timepicker-B6ZjVrEu.css",
+    "src": "resources/vendor/libs/jquery-timepicker/jquery-timepicker.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/jquery/jquery.js": {
+    "file": "assets/jquery-CbdDuLi-.js",
+    "name": "jquery",
+    "src": "resources/vendor/libs/jquery/jquery.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-CED9k22g.js",
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-Czc5UB_B.js"
+    ]
+  },
+  "resources/vendor/libs/jstree/jstree.js": {
+    "file": "assets/jstree-ClFQ3ixT.js",
+    "name": "jstree",
+    "src": "resources/vendor/libs/jstree/jstree.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-Czc5UB_B.js",
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/jstree/jstree.scss": {
+    "file": "assets/jstree-j33axGc2.css",
+    "src": "resources/vendor/libs/jstree/jstree.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/jstree/themes/default-dark/32px.png": {
+    "file": "assets/32px-Dz-yIoQr.png",
+    "src": "resources/vendor/libs/jstree/themes/default-dark/32px.png"
+  },
+  "resources/vendor/libs/jstree/themes/default-dark/40px.png": {
+    "file": "assets/40px-ByMkTVs4.png",
+    "src": "resources/vendor/libs/jstree/themes/default-dark/40px.png"
+  },
+  "resources/vendor/libs/jstree/themes/default-dark/throbber.gif": {
+    "file": "assets/throbber-Bl6U5SCJ.gif",
+    "src": "resources/vendor/libs/jstree/themes/default-dark/throbber.gif"
+  },
+  "resources/vendor/libs/jstree/themes/default/32px.png": {
+    "file": "assets/32px-BA06OYE9.png",
+    "src": "resources/vendor/libs/jstree/themes/default/32px.png"
+  },
+  "resources/vendor/libs/jstree/themes/default/40px.png": {
+    "file": "assets/40px-D8f7vDTw.png",
+    "src": "resources/vendor/libs/jstree/themes/default/40px.png"
+  },
+  "resources/vendor/libs/jstree/themes/default/throbber.gif": {
+    "file": "assets/throbber-BEqAytXj.gif",
+    "src": "resources/vendor/libs/jstree/themes/default/throbber.gif"
+  },
+  "resources/vendor/libs/leaflet/leaflet.js": {
+    "file": "assets/leaflet-BsZfBXxl.js",
+    "name": "leaflet",
+    "src": "resources/vendor/libs/leaflet/leaflet.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ],
+    "assets": [
+      "assets/marker-icon-2x-_ZA0WGCc.png",
+      "assets/marker-icon-hN30_KVU.png",
+      "assets/marker-shadow-f7SaPCxT.png"
+    ]
+  },
+  "resources/vendor/libs/leaflet/leaflet.scss": {
+    "file": "assets/leaflet-BoXR-0sR.css",
+    "src": "resources/vendor/libs/leaflet/leaflet.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/mapbox-gl/mapbox-gl.js": {
+    "file": "assets/mapbox-gl-BlMZQ5WB.js",
+    "name": "mapbox-gl",
+    "src": "resources/vendor/libs/mapbox-gl/mapbox-gl.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/mapbox-gl/mapbox-gl.scss": {
+    "file": "assets/mapbox-gl-CfjT4ZTT.css",
+    "src": "resources/vendor/libs/mapbox-gl/mapbox-gl.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/masonry/masonry.js": {
+    "file": "assets/masonry-DZp2dtJm.js",
+    "name": "masonry",
+    "src": "resources/vendor/libs/masonry/masonry.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/maxLength/maxLength.scss": {
+    "file": "assets/maxLength-C6s395qi.css",
+    "src": "resources/vendor/libs/maxLength/maxLength.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/moment/moment.js": {
+    "file": "assets/moment-B6sIOK86.js",
+    "name": "moment",
+    "src": "resources/vendor/libs/moment/moment.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "__commonjs-dynamic-modules-TDtrdbi3.js"
+    ]
+  },
+  "resources/vendor/libs/node-waves/node-waves.js": {
+    "file": "assets/node-waves-BiiupbG3.js",
+    "name": "node-waves",
+    "src": "resources/vendor/libs/node-waves/node-waves.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/node-waves/node-waves.scss": {
+    "file": "assets/node-waves-CNx6tA5W.css",
+    "src": "resources/vendor/libs/node-waves/node-waves.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/notiflix/notiflix.js": {
+    "file": "assets/notiflix-BAYU7CM9.js",
+    "name": "notiflix",
+    "src": "resources/vendor/libs/notiflix/notiflix.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/notiflix/notiflix.scss": {
+    "file": "assets/notiflix-sNjDa63f.css",
+    "src": "resources/vendor/libs/notiflix/notiflix.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/notyf/notyf.js": {
+    "file": "assets/notyf-DUP0mdC1.js",
+    "name": "notyf",
+    "src": "resources/vendor/libs/notyf/notyf.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/notyf/notyf.scss": {
+    "file": "assets/notyf-Bb7lQgXD.css",
+    "src": "resources/vendor/libs/notyf/notyf.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/nouislider/nouislider.js": {
+    "file": "assets/nouislider-DTetY_TT.js",
+    "name": "nouislider",
+    "src": "resources/vendor/libs/nouislider/nouislider.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/nouislider/nouislider.scss": {
+    "file": "assets/nouislider-TRDZmcfe.css",
+    "src": "resources/vendor/libs/nouislider/nouislider.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/numeral/numeral.js": {
+    "file": "assets/numeral-CDEz25Q-.js",
+    "name": "numeral",
+    "src": "resources/vendor/libs/numeral/numeral.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/perfect-scrollbar/perfect-scrollbar.js": {
+    "file": "assets/perfect-scrollbar-Ctz1tjnI.js",
+    "name": "perfect-scrollbar",
+    "src": "resources/vendor/libs/perfect-scrollbar/perfect-scrollbar.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/perfect-scrollbar/perfect-scrollbar.scss": {
+    "file": "assets/perfect-scrollbar-CfyPsj0y.css",
+    "src": "resources/vendor/libs/perfect-scrollbar/perfect-scrollbar.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/pickr/pickr-themes.scss": {
+    "file": "assets/pickr-themes-CFnMLNHJ.css",
+    "src": "resources/vendor/libs/pickr/pickr-themes.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/pickr/pickr.js": {
+    "file": "assets/pickr-B8vJOYPN.js",
+    "name": "pickr",
+    "src": "resources/vendor/libs/pickr/pickr.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/plyr/plyr.js": {
+    "file": "assets/plyr-MHpkrsI2.js",
+    "name": "plyr",
+    "src": "resources/vendor/libs/plyr/plyr.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/plyr/plyr.scss": {
+    "file": "assets/plyr-Fts3TlMB.css",
+    "src": "resources/vendor/libs/plyr/plyr.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/popper/popper.js": {
+    "file": "assets/popper-CjuU2q1_.js",
+    "name": "popper",
+    "src": "resources/vendor/libs/popper/popper.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/quill/editor.scss": {
+    "file": "assets/editor-C5DiHvwm.css",
+    "src": "resources/vendor/libs/quill/editor.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/quill/katex.js": {
+    "file": "assets/katex-CkFzOSNB.js",
+    "name": "katex",
+    "src": "resources/vendor/libs/quill/katex.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/quill/katex.scss": {
+    "file": "assets/katex-AcgIoTf7.css",
+    "src": "resources/vendor/libs/quill/katex.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/quill/quill.js": {
+    "file": "assets/quill-wC-h-ISH.js",
+    "name": "quill",
+    "src": "resources/vendor/libs/quill/quill.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/quill/typography.scss": {
+    "file": "assets/typography-DdofxSkd.css",
+    "src": "resources/vendor/libs/quill/typography.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/raty-js/raty-js.js": {
+    "file": "assets/raty-js-BU826p8z.js",
+    "name": "raty-js",
+    "src": "resources/vendor/libs/raty-js/raty-js.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/raty-js/raty-js.scss": {
+    "file": "assets/raty-js-FRCb2XYL.css",
+    "src": "resources/vendor/libs/raty-js/raty-js.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/select2/select2.js": {
+    "file": "assets/select2-BEw2KOXq.js",
+    "name": "select2",
+    "src": "resources/vendor/libs/select2/select2.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-Czc5UB_B.js"
+    ]
+  },
+  "resources/vendor/libs/select2/select2.scss": {
+    "file": "assets/select2-ZPot_cX7.css",
+    "src": "resources/vendor/libs/select2/select2.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/shepherd/shepherd.js": {
+    "file": "assets/shepherd-1MefyfDK.js",
+    "name": "shepherd",
+    "src": "resources/vendor/libs/shepherd/shepherd.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/shepherd/shepherd.scss": {
+    "file": "assets/shepherd-DUniyfhk.css",
+    "src": "resources/vendor/libs/shepherd/shepherd.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/sortablejs/sortable.js": {
+    "file": "assets/sortable-BQvjmO91.js",
+    "name": "sortable",
+    "src": "resources/vendor/libs/sortablejs/sortable.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/spinkit/spinkit.scss": {
+    "file": "assets/spinkit-FtLLutPi.css",
+    "src": "resources/vendor/libs/spinkit/spinkit.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/sweetalert2/sweetalert2.js": {
+    "file": "assets/sweetalert2-CnmGFP3D.js",
+    "name": "sweetalert2",
+    "src": "resources/vendor/libs/sweetalert2/sweetalert2.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js"
+    ]
+  },
+  "resources/vendor/libs/sweetalert2/sweetalert2.scss": {
+    "file": "assets/sweetalert2-Cpyr-5Il.css",
+    "src": "resources/vendor/libs/sweetalert2/sweetalert2.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/swiper/swiper.js": {
+    "file": "assets/swiper-0Q3Otnj3.js",
+    "name": "swiper",
+    "src": "resources/vendor/libs/swiper/swiper.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/swiper/swiper.scss": {
+    "file": "assets/swiper-B9ituTnC.css",
+    "src": "resources/vendor/libs/swiper/swiper.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/tagify/tagify.js": {
+    "file": "assets/tagify-Dfvdyb2M.js",
+    "name": "tagify",
+    "src": "resources/vendor/libs/tagify/tagify.js",
+    "isEntry": true
+  },
+  "resources/vendor/libs/tagify/tagify.scss": {
+    "file": "assets/tagify-CpDuVQrk.css",
+    "src": "resources/vendor/libs/tagify/tagify.scss",
+    "isEntry": true
+  },
+  "resources/vendor/libs/typeahead-js/typeahead.js": {
+    "file": "assets/typeahead-BKwBoP4T.js",
+    "name": "typeahead",
+    "src": "resources/vendor/libs/typeahead-js/typeahead.js",
+    "isEntry": true,
+    "imports": [
+      "__commonjsHelpers-BosuxZz1.js",
+      "_jquery-Czc5UB_B.js"
+    ]
+  },
+  "resources/vendor/libs/typeahead-js/typeahead.scss": {
+    "file": "assets/typeahead-CROfg2SJ.css",
+    "src": "resources/vendor/libs/typeahead-js/typeahead.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/core.scss": {
+    "file": "assets/core-CxZHfB-b.css",
+    "src": "resources/css/core.css",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-academy-details.scss": {
+    "file": "assets/app-academy-details-Dx7weIWk.css",
+    "src": "resources/vendor/scss/pages/app-academy-details.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-academy.scss": {
+    "file": "assets/app-academy-D9nDJ5Pd.css",
+    "src": "resources/vendor/scss/pages/app-academy.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-calendar.scss": {
+    "file": "assets/app-calendar-Cz3yUmUl.css",
+    "src": "resources/vendor/scss/pages/app-calendar.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-chat.scss": {
+    "file": "assets/app-chat-PXnlZPml.css",
+    "src": "resources/vendor/scss/pages/app-chat.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-ecommerce.scss": {
+    "file": "assets/app-ecommerce-D82evoQF.css",
+    "src": "resources/vendor/scss/pages/app-ecommerce.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-email.scss": {
+    "file": "assets/app-email-CJrERD-A.css",
+    "src": "resources/vendor/scss/pages/app-email.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-invoice-print.scss": {
+    "file": "assets/app-invoice-print-DtK0Q96P.css",
+    "src": "resources/vendor/scss/pages/app-invoice-print.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-invoice.scss": {
+    "file": "assets/app-invoice-D_1e_iXb.css",
+    "src": "resources/vendor/scss/pages/app-invoice.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-kanban.scss": {
+    "file": "assets/app-kanban-Bn6MeA4M.css",
+    "src": "resources/vendor/scss/pages/app-kanban.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-logistics-dashboard.scss": {
+    "file": "assets/app-logistics-dashboard-B390s03F.css",
+    "src": "resources/vendor/scss/pages/app-logistics-dashboard.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/app-logistics-fleet.scss": {
+    "file": "assets/app-logistics-fleet-Bf8MH_ne.css",
+    "src": "resources/vendor/scss/pages/app-logistics-fleet.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/cards-advance.scss": {
+    "file": "assets/cards-advance-DFq3w-Sb.css",
+    "src": "resources/vendor/scss/pages/cards-advance.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/front-page-help-center.scss": {
+    "file": "assets/front-page-help-center-Dx4aNzWs.css",
+    "src": "resources/vendor/scss/pages/front-page-help-center.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/front-page-landing.scss": {
+    "file": "assets/front-page-landing-BIdcTi2w.css",
+    "src": "resources/vendor/scss/pages/front-page-landing.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/front-page-payment.scss": {
+    "file": "assets/front-page-payment-fyWJHT_9.css",
+    "src": "resources/vendor/scss/pages/front-page-payment.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/front-page-pricing.scss": {
+    "file": "assets/front-page-pricing-DfgNwxk_.css",
+    "src": "resources/vendor/scss/pages/front-page-pricing.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/front-page.scss": {
+    "file": "assets/front-page-DopWkCcB.css",
+    "src": "resources/vendor/scss/pages/front-page.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/page-auth.scss": {
+    "file": "assets/page-auth-CFi5gyW2.css",
+    "src": "resources/vendor/scss/pages/page-auth.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/page-faq.scss": {
+    "file": "assets/page-faq-qAABI_Lw.css",
+    "src": "resources/vendor/scss/pages/page-faq.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/page-icons.scss": {
+    "file": "assets/page-icons-D6IKadVY.css",
+    "src": "resources/vendor/scss/pages/page-icons.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/page-misc.scss": {
+    "file": "assets/page-misc-DiBKZ2WG.css",
+    "src": "resources/vendor/scss/pages/page-misc.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/page-pricing.scss": {
+    "file": "assets/page-pricing-CpmbCG9Z.css",
+    "src": "resources/vendor/scss/pages/page-pricing.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/page-profile.scss": {
+    "file": "assets/page-profile-DWtLH1r0.css",
+    "src": "resources/vendor/scss/pages/page-profile.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/page-user-view.scss": {
+    "file": "assets/page-user-view-JLaoa6qr.css",
+    "src": "resources/vendor/scss/pages/page-user-view.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/ui-carousel.scss": {
+    "file": "assets/ui-carousel-Csd0iM0B.css",
+    "src": "resources/vendor/scss/pages/ui-carousel.scss",
+    "isEntry": true
+  },
+  "resources/vendor/scss/pages/wizard-ex-checkout.scss": {
+    "file": "assets/wizard-ex-checkout-CHs2XWBD.css",
+    "src": "resources/vendor/scss/pages/wizard-ex-checkout.scss",
     "isEntry": true
   }
 }

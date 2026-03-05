@@ -1009,7 +1009,7 @@ const Helpers = {
     }
     return (
       themeName ||
-      (window.templateCustomizer.settings.defaultTheme ? window.templateCustomizer.settings.defaultTheme : 'light')
+      (window.templateCustomizer?.settings?.defaultTheme ?? 'light')
     )
   },
 

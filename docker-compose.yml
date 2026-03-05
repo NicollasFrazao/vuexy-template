@@ -48,7 +48,7 @@ services:
       - mysql-data:/var/lib/mysql
       - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
     ports:
-      - "3306:3306"
+      - "33066:3306"
     networks:
       - vuexy-network
 

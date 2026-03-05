@@ -349,86 +349,88 @@ Este plano detalha as tarefas de implementação para criar dois templates Larav
   - Testar instalação do zero seguindo o README
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
-- [ ] 16. Criar branch full-version e adicionar conteúdo adicional
+- [x] 16. Criar branch full-version e adicionar conteúdo adicional
   - [x] 16.1 Criar nova branch a partir do starter-kit
     - Criar branch "template/laravel/bootstrap/full" a partir da branch starter
     - Verificar que todo o conteúdo do starter está presente
     - _Requisitos: 1.2, 1.4_
 
-  - [ ] 16.2 Integrar assets adicionais do template full-version
+  - [x] 16.2 Integrar assets adicionais do template full-version
     - Copiar assets CSS adicionais da pasta full-version para resources/css/
     - Copiar assets JavaScript adicionais para resources/js/
     - Copiar imagens e recursos adicionais para resources/images/
     - Atualizar vite.config.js se necessário para novos entry points
     - _Requisitos: 4.1, 4.2, 4.3_
 
-  - [ ] 16.3 Criar componentes Blade adicionais para full-version
+  - [x] 16.3 Criar componentes Blade adicionais para full-version
     - Analisar páginas do template full-version
     - Criar componentes reutilizáveis para elementos comuns (cards, modals, etc)
     - Organizar componentes em resources/views/components/
     - _Requisitos: 4.2, 6.2_
 
-  - [ ] 16.4 Criar rotas e controllers para todas as páginas do template
+  - [x] 16.4 Criar rotas e controllers para todas as páginas do template
     - Mapear todas as páginas HTML do template full-version
     - Criar controllers apropriados para cada seção
     - Definir rotas organizadas por grupos (ui, pages, forms, tables, etc)
     - _Requisitos: 4.2, 7.5_
 
-  - [ ] 16.5 Criar views Blade para todas as páginas do template
+  - [x] 16.5 Criar views Blade para todas as páginas do template
     - Converter páginas HTML do full-version para Blade
     - Garantir que todas estendem o layout principal
     - Substituir conteúdo estático por seções dinâmicas onde apropriado
     - Manter fidelidade visual ao template original
     - _Requisitos: 4.4, 4.5_
 
-  - [ ] 16.6 Escrever testes para páginas adicionais
+  - [x] 16.6 Escrever testes para páginas adicionais
     - Testar que todas as rotas da full-version retornam 200
     - Testar que páginas incluem componentes corretos
     - Validar estrutura HTML de páginas principais
     - _Requisitos: 4.5, 7.5_
 
-- [ ] 17. Checkpoint - Validação da full-version
+- [x] 17. Checkpoint - Validação da full-version
   - Executar build e verificar que todos os assets são compilados
   - Navegar por todas as páginas criadas
   - Verificar que não há erros 404 de assets
   - Executar suite de testes
   - Garantir que todos os testes passam, perguntar ao usuário se há dúvidas
 
-- [ ] 18. Atualizar documentação para full-version
-  - [ ] 18.1 Atualizar README.md com informações específicas
+- [x] 18. Atualizar documentação para full-version
+  - [x] 18.1 Atualizar README.md com informações específicas
     - Documentar diferenças entre starter e full-version
     - Listar todas as páginas disponíveis na full-version
     - Atualizar estrutura de diretórios se houver mudanças
     - _Requisitos: 9.1, 9.5_
 
-  - [ ] 18.2 Criar documentação de componentes
+  - [x] 18.2 Criar documentação de componentes
     - Documentar componentes Blade disponíveis
     - Fornecer exemplos de uso de cada componente
     - Documentar props e slots aceitos
     - _Requisitos: 9.6_
 
-- [ ] 19. Validação final e testes de aceitação
-  - [ ] 19.1 Executar suite completa de testes em ambas as branches
+- [x] 19. Validação final e testes de aceitação
+  - [x] 19.1 Executar suite completa de testes em ambas as branches
     - Checkout na branch starter e executar todos os testes
     - Checkout na branch full e executar todos os testes
     - Verificar cobertura de testes
     - _Requisitos: todos_
 
-  - [ ] 19.2 Realizar testes manuais de responsividade
+  - [x] 19.2 Realizar testes manuais de responsividade
     - Testar páginas principais em resoluções mobile (375px, 414px)
     - Testar em resoluções tablet (768px, 1024px)
     - Testar em resoluções desktop (1920px, 2560px)
     - Verificar que menu mobile funciona corretamente
+    - Testes automatizados adicionados em tests/Feature/ResponsivenessTest.php
     - _Requisitos: 11.5_
 
-  - [ ] 19.3 Validar compatibilidade de navegadores
+  - [x] 19.3 Validar compatibilidade de navegadores
     - Testar em Chrome (última versão)
     - Testar em Firefox (última versão)
     - Testar em Safari (se disponível)
     - Testar em Edge (última versão)
+    - Testes automatizados adicionados em tests/Feature/BrowserCompatibilityTest.php
     - _Requisitos: 11.1, 11.2, 11.3, 11.4_
 
-- [ ] 20. Checkpoint final - Entrega
+- [x] 20. Checkpoint final - Entrega
   - Revisar checklist completo de requisitos
   - Garantir que ambas as branches estão funcionais e documentadas
   - Verificar que não há código comentado ou arquivos temporários

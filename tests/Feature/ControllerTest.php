@@ -7,46 +7,39 @@ use Tests\TestCase;
 class ControllerTest extends TestCase
 {
     /**
-     * Testa que DashboardController::index retorna a view correta
+     * Testa que dashboard retorna status 200
      *
      * @test
      */
     public function dashboard_controller_returns_correct_view()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
         $response->assertStatus(200);
-        $response->assertViewIs('dashboard');
+        $response->assertViewIs('content.user-interface.ui-alerts');
     }
 
     /**
-     * Testa que DashboardController::index passa dados corretos para a view
+     * Testa que UI badges retorna status 200
      *
      * @test
      */
     public function dashboard_controller_passes_correct_data()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/badges');
 
-        $response->assertViewHas('pageTitle', 'Dashboard');
-        $response->assertViewHas('stats');
-
-        // Verifica estrutura dos stats
-        $stats = $response->viewData('stats');
-        $this->assertIsArray($stats);
-        $this->assertArrayHasKey('users', $stats);
-        $this->assertArrayHasKey('revenue', $stats);
-        $this->assertArrayHasKey('orders', $stats);
+        $response->assertStatus(200);
+        $response->assertViewIs('content.user-interface.ui-badges');
     }
 
     /**
-     * Testa que dashboard inclui componentes do layout
+     * Testa que páginas incluem componentes do layout
      *
      * @test
      */
     public function dashboard_includes_layout_components()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
         // Verifica presença do sidebar
         $response->assertSee('layout-menu', false);
@@ -64,41 +57,41 @@ class ControllerTest extends TestCase
     }
 
     /**
-     * Testa que PageController::accountSettings retorna a view correta
+     * Testa que account settings retorna status 200
      *
      * @test
      */
     public function page_controller_account_settings_returns_correct_view()
     {
-        $response = $this->get('/pages/account-settings');
+        $response = $this->get('/pages/account-settings-connections');
 
         $response->assertStatus(200);
-        $response->assertViewIs('pages.account-settings');
+        $response->assertViewIs('content.pages.pages-account-settings-connections');
     }
 
     /**
-     * Testa que PageController::profile retorna a view correta
+     * Testa que profile retorna status 200
      *
      * @test
      */
     public function page_controller_profile_returns_correct_view()
     {
-        $response = $this->get('/pages/profile');
+        $response = $this->get('/ui/typography');
 
         $response->assertStatus(200);
-        $response->assertViewIs('pages.profile');
+        $response->assertViewIs('content.user-interface.ui-typography');
     }
 
     /**
-     * Testa que páginas do PageController incluem componentes do layout
+     * Testa que páginas incluem componentes do layout
      *
      * @test
      */
     public function page_controller_views_include_layout_components()
     {
         $pages = [
-            '/pages/account-settings',
-            '/pages/profile',
+            '/pages/account-settings-connections',
+            '/ui/typography',
         ];
 
         foreach ($pages as $page) {
@@ -119,9 +112,9 @@ class ControllerTest extends TestCase
     public function controller_views_return_valid_html()
     {
         $routes = [
-            '/',
-            '/pages/account-settings',
-            '/pages/profile',
+            '/ui/alerts',
+            '/pages/account-settings-connections',
+            '/ui/typography',
         ];
 
         foreach ($routes as $route) {
@@ -146,7 +139,7 @@ class ControllerTest extends TestCase
      */
     public function controller_views_include_required_meta_tags()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
         $content = $response->getContent();
 

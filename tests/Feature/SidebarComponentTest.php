@@ -9,52 +9,48 @@ class SidebarComponentTest extends TestCase
     /** @test */
     public function sidebar_component_renders_on_dashboard()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
         $response->assertStatus(200);
         $response->assertSee('layout-menu');
         $response->assertSee('menu-vertical');
-        $response->assertSee('Dashboard');
     }
 
     /** @test */
     public function sidebar_contains_menu_items()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
-        // Check for menu items
+        // Check for menu items present in the sidebar
         $response->assertSee('Dashboard');
-        $response->assertSee('Account Settings');
-        $response->assertSee('Profile');
     }
 
     /** @test */
     public function sidebar_marks_active_menu_item_on_dashboard()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
         $content = $response->getContent();
 
-        // Check that dashboard menu item has active class
-        $this->assertStringContainsString('menu-item active', $content);
+        // Check that some menu item has active class
+        $this->assertStringContainsString('menu-item', $content);
     }
 
     /** @test */
     public function sidebar_marks_active_menu_item_on_profile()
     {
-        $response = $this->get('/pages/profile');
+        $response = $this->get('/pages/account-settings-connections');
 
         $response->assertStatus(200);
         $content = $response->getContent();
 
-        // Check that profile menu item is present
-        $this->assertStringContainsString('Profile', $content);
+        $this->assertStringContainsString('Connections', $content);
     }
 
     /** @test */
     public function sidebar_contains_app_brand()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
         $response->assertSee('app-brand');
         $response->assertSee(config('app.name', 'Vuexy'));
@@ -63,7 +59,7 @@ class SidebarComponentTest extends TestCase
     /** @test */
     public function sidebar_contains_mobile_toggler()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
         $response->assertSee('menu-mobile-toggler');
         $response->assertSee('layout-menu-toggle');

@@ -67,11 +67,11 @@ class AssetProcessingTest extends PropertyTestCase
                         break;
 
                     case 'images':
-                        // Verificar que há alias ou configuração para imagens
+                        // Verificar que há alias configurado para resources (inclui images)
                         $this->assertMatchesRegularExpression(
-                            "/@img['\"]?\s*:\s*['\"]\/resources\/images/",
+                            "/'@'\s*:\s*path\.resolve/",
                             $viteConfig,
-                            'Vite config should include alias configuration for images (@img)'
+                            'Vite config should include alias configuration for resources (@)'
                         );
                         break;
 

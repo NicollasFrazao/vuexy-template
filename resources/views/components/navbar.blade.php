@@ -151,7 +151,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item" href="{{ route('pages.profile') }}">
+                        <a class="dropdown-item" href="{{ route('pages-profile-user') }}">
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
@@ -169,13 +169,13 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="{{ route('pages.profile') }}">
+                        <a class="dropdown-item" href="{{ route('pages-profile-user') }}">
                             <i class="ti ti-user-check me-2 ti-sm"></i>
                             <span class="align-middle">My Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="{{ route('pages.account-settings') }}">
+                        <a class="dropdown-item" href="{{ route('pages-account-settings-account') }}">
                             <i class="ti ti-settings me-2 ti-sm"></i>
                             <span class="align-middle">Settings</span>
                         </a>

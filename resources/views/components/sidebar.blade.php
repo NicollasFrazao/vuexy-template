@@ -50,16 +50,16 @@
         </li>
 
         <!-- Account Settings -->
-        <li class="menu-item {{ request()->routeIs('pages.account-settings') ? 'active' : '' }}">
-            <a href="{{ route('pages.account-settings') }}" class="menu-link">
+        <li class="menu-item {{ request()->routeIs('pages-account-settings-account') ? 'active' : '' }}">
+            <a href="{{ route('pages-account-settings-account') }}" class="menu-link">
                 <i class="menu-icon icon-base ti tabler-settings"></i>
                 <div data-i18n="Account Settings">Account Settings</div>
             </a>
         </li>
 
         <!-- Profile -->
-        <li class="menu-item {{ request()->routeIs('pages.profile') ? 'active' : '' }}">
-            <a href="{{ route('pages.profile') }}" class="menu-link">
+        <li class="menu-item {{ request()->routeIs('pages-profile-user') ? 'active' : '' }}">
+            <a href="{{ route('pages-profile-user') }}" class="menu-link">
                 <i class="menu-icon icon-base ti tabler-user"></i>
                 <div data-i18n="Profile">Profile</div>
             </a>

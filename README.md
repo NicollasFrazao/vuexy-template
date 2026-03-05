@@ -1394,12 +1394,302 @@ In production, you MUST:
 
 All services communicate through the `vuexy-network` bridge network, allowing containers to reference each other by service name (e.g., `mysql`, `redis`).
 
-## 📖 Additional Resources
+## 🆚 Starter vs Full Version
+
+This repository provides two template branches:
+
+| Feature | Starter (`template/laravel/bootstrap/starter`) | Full (`template/laravel/bootstrap/full`) |
+|---------|------------------------------------------------|------------------------------------------|
+| Dashboard | Analytics only | Analytics + CRM |
+| Pages | Account settings, Profile | All pages (FAQ, Pricing, Misc, etc.) |
+| Apps | — | Email, Chat, Calendar, Kanban, Ecommerce, Academy, Logistics, Invoice, User management |
+| UI Components | — | All Bootstrap 5 UI components (accordion, alerts, badges, buttons, carousel, etc.) |
+| Extended UI | — | Avatar, BlockUI, Drag & Drop, Media Player, Star Ratings, SweetAlert2, Timeline, Tour, Treeview |
+| Icons | — | Tabler Icons, Font Awesome |
+| Forms | — | Basic inputs, Input groups, Custom options, Editors, File upload, Pickers, Selects, Sliders, Switches |
+| Form Layouts | — | Vertical, Horizontal, Sticky actions |
+| Form Wizard | — | Numbered, Icons |
+| Tables | — | Basic, DataTables (basic, advanced, extensions) |
+| Charts | — | ApexCharts, Chart.js |
+| Maps | — | Leaflet |
+| Authentication | — | Login, Register, Forgot/Reset password, Two-step, Verify email (basic + cover variants) |
+| Front Pages | — | Landing, Pricing, Payment, Checkout, Help Center |
+| Layouts | — | Collapsed menu, Content navbar, Horizontal, Fluid, Container, Blank, Without menu/navbar |
+| Laravel Example | — | User management (CRUD) |
+
+### Switching Between Versions
+
+```bash
+# Starter version
+git checkout template/laravel/bootstrap/starter
+
+# Full version
+git checkout template/laravel/bootstrap/full
+```
+
+Both branches are fully independent Laravel projects. After switching, run:
+
+```bash
+composer install
+npm install
+npm run build
+php artisan migrate
+```
+
+---
+
+
 
 - [Laravel Documentation](https://laravel.com/docs)
 - [Vite Documentation](https://vitejs.dev)
 - [Docker Documentation](https://docs.docker.com)
 - [Bootstrap 5 Documentation](https://getbootstrap.com/docs/5.0)
+
+## 🧩 Blade Components
+
+The full-version includes a set of reusable Blade components in `resources/views/components/`. All components use Laravel's `@props` directive and support attribute merging.
+
+---
+
+### `<x-alert>`
+
+Displays a Bootstrap alert message.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `type` | string | `'primary'` | Bootstrap color: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `dark` |
+| `dismissible` | bool | `false` | Adds a close button |
+| `icon` | string\|null | `null` | Tabler icon class (e.g. `tabler-check`) |
+| `title` | string\|null | `null` | Bold heading inside the alert |
+
+**Slot:** `$slot` — alert body content.
+
+```blade
+<x-alert type="success" dismissible icon="tabler-check" title="Saved!">
+    Your changes have been saved successfully.
+</x-alert>
+```
+
+---
+
+### `<x-avatar>`
+
+Displays a user avatar — either an image or auto-generated initials.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `src` | string\|null | `null` | Image URL. If omitted, initials are shown. |
+| `name` | string | `'User'` | Used for alt text and generating initials |
+| `size` | string\|null | `null` | `xs`, `sm`, `lg`, or `xl` |
+| `color` | string | `'primary'` | Background color for initials avatar |
+| `status` | string\|null | `null` | Status indicator: `online`, `offline`, `away`, `busy` |
+| `rounded` | bool | `false` | Use rounded corners instead of circle |
+
+```blade
+{{-- Image avatar with online status --}}
+<x-avatar src="{{ asset('images/avatars/1.png') }}" name="Jane Doe" status="online" />
+
+{{-- Initials avatar --}}
+<x-avatar name="John Smith" color="success" size="lg" />
+```
+
+---
+
+### `<x-badge>`
+
+Renders a Bootstrap badge/label.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `color` | string | `'primary'` | Bootstrap color variant |
+| `label` | bool | `false` | Use `bg-label-*` (soft) style instead of solid |
+| `pill` | bool | `false` | Apply `rounded-pill` shape |
+| `dot` | bool | `false` | Show as a dot indicator |
+
+**Slot:** `$slot` — badge text.
+
+```blade
+<x-badge color="success">Active</x-badge>
+<x-badge color="warning" label>Pending</x-badge>
+<x-badge color="danger" pill>3</x-badge>
+```
+
+---
+
+### `<x-card>`
+
+A Bootstrap card with optional header, footer, and header actions.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `title` | string\|null | `null` | Card header title text |
+
+**Slots:**
+
+| Slot | Description |
+|------|-------------|
+| `$slot` | Card body content |
+| `$header` | Custom header content (overrides `title`) |
+| `$headerActions` | Right-side header actions (buttons, dropdowns) |
+| `$footer` | Card footer content |
+
+```blade
+{{-- Simple card --}}
+<x-card title="Recent Orders">
+    <p>Card body content here.</p>
+</x-card>
+
+{{-- Card with actions and footer --}}
+<x-card title="Users">
+    <x-slot:headerActions>
+        <a href="#" class="btn btn-sm btn-primary">Add User</a>
+    </x-slot:headerActions>
+    <p>Table or content here.</p>
+    <x-slot:footer>
+        <small class="text-muted">Updated 5 minutes ago</small>
+    </x-slot:footer>
+</x-card>
+```
+
+---
+
+### `<x-stat-card>`
+
+A KPI/statistics card with icon, value, trend, and subtitle.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `title` | string | `''` | Label above the value |
+| `value` | string | `''` | Main numeric/text value |
+| `icon` | string | `'tabler-chart-bar'` | Tabler icon class |
+| `color` | string | `'primary'` | Icon badge color |
+| `trend` | string\|null | `null` | Trend text (e.g. `+12%`) |
+| `trendType` | string | `'up'` | `'up'` (green) or `'down'` (red) |
+| `subtitle` | string\|null | `null` | Secondary text below the value |
+
+```blade
+<x-stat-card
+    title="Total Users"
+    value="1,234"
+    icon="tabler-users"
+    color="primary"
+    trend="+12%"
+    subtitle="vs last month"
+/>
+```
+
+---
+
+### `<x-modal>`
+
+A Bootstrap modal dialog.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `id` | string | auto-generated | Unique modal ID for JS targeting |
+| `title` | string | `''` | Modal header title |
+| `size` | string\|null | `null` | `sm`, `lg`, or `xl` |
+| `scrollable` | bool | `false` | Scrollable modal body |
+| `centered` | bool | `false` | Vertically centered |
+| `staticBackdrop` | bool | `false` | Prevent closing on outside click |
+
+**Slots:**
+
+| Slot | Description |
+|------|-------------|
+| `$slot` | Modal body content |
+| `$footer` | Modal footer (buttons) |
+
+```blade
+{{-- Trigger --}}
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal">
+    Delete
+</button>
+
+{{-- Modal --}}
+<x-modal id="confirmModal" title="Confirm Delete" size="sm" centered>
+    Are you sure you want to delete this item?
+    <x-slot:footer>
+        <button class="btn btn-label-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-danger">Delete</button>
+    </x-slot:footer>
+</x-modal>
+```
+
+---
+
+### `<x-data-table>`
+
+A responsive Bootstrap table wrapped in a card.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `title` | string\|null | `null` | Card header title |
+| `headers` | array | `[]` | Column header labels |
+| `striped` | bool | `false` | Alternating row colors |
+| `hoverable` | bool | `true` | Row hover effect |
+| `bordered` | bool | `false` | Cell borders |
+| `small` | bool | `false` | Compact padding |
+
+**Slots:**
+
+| Slot | Description |
+|------|-------------|
+| `$slot` | `<tr>` elements for `<tbody>` |
+| `$headerActions` | Right-side card header actions |
+
+```blade
+<x-data-table
+    title="Users"
+    :headers="['Name', 'Email', 'Role', 'Status', 'Actions']"
+    striped
+>
+    <x-slot:headerActions>
+        <button class="btn btn-sm btn-primary">Add User</button>
+    </x-slot:headerActions>
+    <tr>
+        <td>Jane Doe</td>
+        <td>jane@example.com</td>
+        <td>Admin</td>
+        <td><x-badge color="success" label>Active</x-badge></td>
+        <td><button class="btn btn-sm btn-icon btn-text-secondary">...</button></td>
+    </tr>
+</x-data-table>
+```
+
+---
+
+### `<x-page-header>`
+
+Page title with optional breadcrumb and action buttons.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `title` | string | `''` | Page heading |
+| `subtitle` | string\|null | `null` | Descriptive text below the title |
+
+**Slots:**
+
+| Slot | Description |
+|------|-------------|
+| `$breadcrumb` | `<li>` elements for the breadcrumb trail |
+| `$actions` | Right-side action buttons |
+
+```blade
+<x-page-header title="User List" subtitle="Manage all registered users">
+    <x-slot:breadcrumb>
+        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
+        <li class="breadcrumb-item active">Users</li>
+    </x-slot:breadcrumb>
+    <x-slot:actions>
+        <a href="#" class="btn btn-primary">
+            <i class="ti tabler-plus me-1"></i> Add User
+        </a>
+    </x-slot:actions>
+</x-page-header>
+```
+
+---
 
 ## 🤝 Contributing
 

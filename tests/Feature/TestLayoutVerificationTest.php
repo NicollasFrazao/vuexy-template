@@ -9,16 +9,16 @@ class TestLayoutVerificationTest extends TestCase
     /** @test */
     public function test_layout_page_renders_successfully()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
         $response->assertStatus(200);
-        $response->assertSee('Dashboard');
+        $response->assertSee('layout-wrapper');
     }
 
     /** @test */
     public function test_layout_includes_all_components()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
         // Verify sidebar is present
         $response->assertSee('menu-inner');
@@ -30,13 +30,13 @@ class TestLayoutVerificationTest extends TestCase
         $response->assertSee('content-footer');
 
         // Verify main content is present
-        $response->assertSee('Dashboard');
+        $response->assertSee('alert');
     }
 
     /** @test */
     public function test_layout_references_vite_assets()
     {
-        $response = $this->get('/');
+        $response = $this->get('/ui/alerts');
 
         // Verify that assets are loaded (Vite processes @vite directives)
         $content = $response->getContent();

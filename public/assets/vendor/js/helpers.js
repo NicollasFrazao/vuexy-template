@@ -1364,4 +1364,3 @@ if (typeof window !== 'undefined') {
 
 // ---
 window.Helpers = Helpers
-export { Helpers }
